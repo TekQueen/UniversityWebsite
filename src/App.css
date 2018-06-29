@@ -1,0 +1,347 @@
+/* ---------- REST.CSS ---------- */
+h1, h2, h3, h4, h5, h6, p {
+  font-family: arial;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5em;
+  width: 95vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#logo {
+ width: 90px;
+ height: 90px;
+}
+
+/* nav bar */
+
+#navBar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+
+}
+
+#navBar a {
+  color: #1D0F3A;
+  text-decoration: none;
+  font-size: 1em;
+  padding: 14px 20px;
+  text-align: center;
+}
+
+#navBar a:hover {
+ text-decoration: underline #ffef13;
+}
+
+/* ---------- MAIN IMAGE(HEADER IMAGE) ---------- */
+
+/* EUA main image*/
+#euaImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  width: 95vw;
+  height: 80vh;
+  border-radius: 0.5em;
+}
+
+#headerContainer {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+
+#headerText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 1px 1px 5px #1D0F3A;
+  font-size: 1em;
+}
+
+#headerContainer:hover #euaImage {
+  opacity: 0.9;
+}
+
+#headerContainer:hover #headerText {
+  display: none;
+}
+
+#applyNow {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+#applyButton {
+  background-color: white;
+  border-radius: 0.5em;
+  border: 1px solid #1D0F3A;
+  color: #1D0F3A;
+  font-size: 1em;
+  padding: 2em;
+  cursor: pointer;
+}
+
+#applyButton:hover {
+  box-shadow: 2px 2px 10px #1D0F3A;
+}
+
+#headerContainer:hover #applyNow {
+  opacity: 0.9;
+}
+
+/* ---------- ABOUT US ---------- */
+
+.aboutUs {
+  opacity: 1;
+  animation: fade 2s ease;
+  color: #404040;
+}
+
+.aboutUsSecondSection {
+  opacity: 1;
+  animation: fade 2s ease;
+  color: #404040;
+}
+
+@keyframes fade {
+  0%{ opacity: 0 }
+  100% { opacity: 1 }
+}
+
+#aboutUsSection {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5em;
+  width: 95vw;
+}
+
+#aboutUsSection h2,  #documentsSection h2{
+  text-align: center;
+  font-size: 2em;
+  color: #1D0F3A;
+  margin-top: 1em; 
+  text-decoration: underline #ffef13;
+  /*text-shadow: 0 0 1em #ffef13;*/
+}
+
+#aboutUsSection h3 {
+  text-align: right;
+  font-size: 1.5em;
+  color: #1D0F3A;
+}
+
+.aboutUs {
+  display: flex;
+  justify-content: space-between;
+}
+
+#confRoom {
+  width: 33vw;
+  height: 40vh;
+  border-radius: 0.5em;
+  border: 0.05em solid #1D0F3A;
+  box-shadow: 0em 0em 0.5em #1D0F3A;
+}
+
+.aboutUsText {
+  margin-left: 1em;
+  text-align: justify;
+  line-height: 1.5em;
+}
+
+
+.list {
+  text-align: right;
+  margin-bottom: 1.5em;
+}
+
+/* ---------- FOOTER ---------- */
+
+#footer {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+  width: 95vw;
+  background-color: #1D0F3A;
+  border-radius: 0.5em;
+}
+
+#footerFirstPart {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#footerFirstPart > div {
+  margin-top: 2em;
+  margin-bottom: 1em; 
+}
+
+#footerFirstPart h5 {
+  color: #ffef13;
+  font-size: 1em;
+  text-align: right;
+}
+
+#footerLogo {
+  text-align: center;
+  margin-top: 3em; 
+  margin-bottom: -6em;
+}
+
+#footerLogo logo {
+  width: 70px;
+  height: 70px;
+} 
+
+.footerList, .footerList a {
+  color: #DCDCDC;
+  font-family: arial;
+  font-size: 1em;
+  margin: 0.8em;
+  text-align: right;
+}
+
+.socialMedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialMediaLogo {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  margin-right: 1em;
+  margin-left: 1em;
+}
+
+.socialMediaLogo:hover {
+  box-shadow: 0 0 1em #ffef13;
+  cursor: pointer;
+}
+
+/* ---------- DOCUMENTS ---------- */
+#documentsSection{
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  width: 95vw;
+}
+
+.Dcontainer {
+  position: relative;
+}
+
+.initailBox {
+  display: block;
+  text-align: right;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  width: 95vw;
+  font-family: arial;
+  font-size: 1.1em;
+  color: #404040;
+
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+  background-color: #1D0F3A;
+  border-radius: 0.5em;
+  opacity: 0;
+  
+}
+
+.Dcontainer:hover .overlay {
+  opacity: 1;
+  bottom: 0;
+  height: 100%;
+}
+
+.Dcontainer:hover .initailBox {
+  height: 50vh;
+}
+
+
+
+.text {
+  color: #DCDCDC;
+  font-size: 1em;
+  text-align: right;
+  margin: 1em;
+}
+
+.overlay h4 {
+  color: yellow;
+  font-size: 1em;
+  text-align: center;
+}
+
+#attentionContainer {
+  background-color: #E0E0E0;
+  border-radius: 0.5em;
+  padding: 1em;
+  margin-top: 2em;
+}
+
+#attention {
+  color: #54110F;
+  text-align: right;
+}
+
+.attentionText{
+  font-family: arial;
+  font-size: 1em;
+  color: #404040;
+  text-align: right;
+  margin-bottom: 1.5em;
+}
+
+@media screen and (max-width: 700px) {
+  .aboutUs {   
+    flex-direction: column;
+  }
+
+  #footerFirstPart {
+    flex-direction: column;
+  }
+
+  #confRoom {
+    width: 95vw;
+  }
+
+  .Dcontainer:hover .initailBox {
+    height: 80vh;
+  }
+}

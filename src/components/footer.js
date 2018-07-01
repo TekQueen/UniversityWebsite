@@ -22,15 +22,15 @@ function Footer(props) {
                     دانشگاه اروپائی
                         </h5>
 
-                        <div class = 'footerList'>
+                        <div className = 'footerList'>
                         جمهوری ارمنستان، شهر ایروان– 037
                         </div>
 
-                        <div class = 'footerList'>
+                        <div className = 'footerList'>
                         خیابان داوید آنهاقت ، پلاک 10
                         </div>
 
-                        <div class = 'footerList'>
+                        <div className = 'footerList'>
                         تلفن : 241891  0037410
                         </div>
                     </div>
@@ -40,24 +40,24 @@ function Footer(props) {
                         پست الکترونیکی
                         </h5>
 
-                        <div class = 'footerList'>
+                        <div className = 'footerList'>
                         info@eriicta.com الکترونیکی
                         </div>
 
-                        <div class = 'footerList'>
+                        <div className = 'footerList'>
                             <a href = '#'>www.eriicta.com الکترونیکی</a>
                         </div>
 
-                        <div class = 'footerList'>
+                        <div className = 'footerList'>
                             <a href = '#'>www.eua.am الکترونیکی</a>
                         </div>
                     </div>  
                 </div>
                 
-                <div class = 'socialMedia'>
-                    <img src = {instagram} class = 'socialMediaLogo' alt = 'eua logo'/>
-                    <img src = {facebook} class = 'socialMediaLogo' alt = 'eua logo'/>
-                    <img src = {telegram} class = 'socialMediaLogo' alt = 'eua logo'/>
+                <div className = 'socialMedia'>
+                    <img src = {instagram} className = 'socialMediaLogo' alt = 'eua logo'/>
+                    <img src = {facebook} className = 'socialMediaLogo' alt = 'eua logo'/>
+                    <img src = {telegram} className = 'socialMediaLogo' alt = 'eua logo'/>
                 </div>
 
             </div>

@@ -5,8 +5,6 @@ import uniHall from '../image/uniHall.jpg';
 import library from '../image/library.jpg';
 
 import LongText from './longtext';
-import ListOfThings from './listofthings';
-import MiniImage from './miniImage';
 import ListOfThingsBox from './listofthingsbox';
 
 import '../App.css';

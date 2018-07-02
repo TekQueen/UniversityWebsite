@@ -158,7 +158,7 @@ header {
   height: 40vh;
   border-radius: 0.5em;
   border: 0.05em solid #1D0F3A;
-  box-shadow: 0em 0em 0.5em #1D0F3A;
+  
 }
 
 .aboutUsText {
@@ -218,12 +218,20 @@ header {
   height: 70px;
 } 
 
-.footerList, .footerList a {
+.footerList {
   color: #DCDCDC;
   font-family: arial;
   font-size: 1em;
   margin: 0.8em;
+}
+
+.footerListElement {
   text-align: right;
+}
+
+.footerListLink {
+  display: block;
+  cursor: pointer;
 }
 
 .socialMedia {

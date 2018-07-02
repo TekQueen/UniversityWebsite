@@ -47,7 +47,7 @@ class App extends Component {
           aboutUsId ='aboutUsSection' 
           documentsId = 'documentsSection'
         />
-        
+     
         <MainImage clickHandler = {this.applyButtonClicked} />
 
         <AboutUs />

@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import LongText from './longtext';
 import ListOfThings from './listofthings';
 import MiniImage from './miniImage';
 

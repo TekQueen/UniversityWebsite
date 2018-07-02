@@ -1,4 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
+
+import FooterLogos from './footerlogos';
+import FooterContent from './footercontent';
 
 import logo from '../image/logo.png';
 import instagram from '../image/instagram.png';
@@ -15,50 +18,45 @@ function Footer(props) {
             </div>
             
             <div id = 'footer'>
+ 
+            <div id = 'footerFirstPart'>
 
-                <div id = 'footerFirstPart'>
-                    <div>
-                        <h5>
-                    دانشگاه اروپائی
-                        </h5>
+                <FooterContent 
+                    contentHeader = 'دانشگاه اروپائی'
+                    content = {[
+                        'جمهوری ارمنستان، شهر ایروان– 037',
+                        'خیابان داوید آنهاقت ، پلاک 10',
+                        'تلفن : 241891  0037410',
+                    ]}
+                />
 
-                        <div className = 'footerList'>
-                        جمهوری ارمنستان، شهر ایروان– 037
-                        </div>
-
-                        <div className = 'footerList'>
-                        خیابان داوید آنهاقت ، پلاک 10
-                        </div>
-
-                        <div className = 'footerList'>
-                        تلفن : 241891  0037410
-                        </div>
-                    </div>
-
-                    <div>
-                        <h5>
-                        پست الکترونیکی
-                        </h5>
-
-                        <div className = 'footerList'>
-                        info@eriicta.com الکترونیکی
-                        </div>
-
-                        <div className = 'footerList'>
-                            <a href = '#'>www.eriicta.com الکترونیکی</a>
-                        </div>
-
-                        <div className = 'footerList'>
-                            <a href = '#'>www.eua.am الکترونیکی</a>
-                        </div>
-                    </div>  
-                </div>
-                
-                <div className = 'socialMedia'>
-                    <img src = {instagram} className = 'socialMediaLogo' alt = 'eua logo'/>
-                    <img src = {facebook} className = 'socialMediaLogo' alt = 'eua logo'/>
-                    <img src = {telegram} className = 'socialMediaLogo' alt = 'eua logo'/>
-                </div>
+                <FooterContent 
+                    contentHeader = 'پست الکترونیکی '
+                    contentLinks = {[
+                    'info@eriicta.com',
+                    'www.eriicta.com',
+                    'www.era.am',
+                    ]}
+                />
+                 
+            </div>
+                             
+                <FooterLogos 
+                    imagesArray = {[    
+                        {
+                            imageSrc: `${instagram}`,
+                            imageAlt: `instagram logo`
+                        },                       
+                        {
+                            imageSrc: `${facebook}`,
+                            imageAlt: `facebook logo`
+                        },                        
+                        {
+                            imageSrc: `${telegram}`,
+                            imageAlt: `telegram logo`
+                        },
+                    ]}
+                />
 
             </div>
         </div>

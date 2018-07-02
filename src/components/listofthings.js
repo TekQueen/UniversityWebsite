@@ -6,13 +6,18 @@ import '../App.css';
 function ListOfThings(props) {
     let listArray = props.listofthings;
     
-    let copyOfListArray = listArray.map(
-        element => <div className = 'list'>  {element} &#x25CF; </div>
+    listArray = listArray.map(
+        (element, index) => <div 
+                                className = 'list'
+                                key = {index}
+                            >  
+                                {element} &#x25CF; 
+                            </div>
     );
 
     return (
         <div>
-            { copyOfListArray }     
+            { listArray }     
         </div>
     );
 }

@@ -1,62 +1,37 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-import Header from './components/header';
-import MainImage from './components/mainimage';
-import AboutUs from './components/aboutus';
-import Footer from './components/footer';
+import {
+    BrowserRouter,
+    Route,
+    Switch,
+} from 'react-router-dom';
+
+import HomePage from './components/homepage';
 import Documents from './components/documents';
+import Header from './components/header';
+import Footer from './components/footer';
 import ApplyPage from './components/applyPage';
 
 import './App.css';
 
-class App extends Component {
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      checked: false,
-    }
-
-    this.applyButtonClicked = this.applyButtonClicked.bind(this);
-  }
-
-
-  applyButtonClicked() {
-    this.setState(
-        (prevState, props) => {
-           return { checked: !prevState.checked }
-        }
-    );
-
-    console.log(this.state.checked);
-  }
-
-
-  render() {
-
-    /*<ApplyPage 
-    clickHandler = {this.applyButtonClicked}
-    className = {(this.state.checked ? 'applyBox' : 'HiddenApplyBox')} 
-    />*/
-   
+function App(props) {
     return (
-      <React.Fragment>
+        <BrowserRouter>
 
-        <Header 
-          aboutUsId ='aboutUsSection' 
-          documentsId = 'documentsSection'
-        />
-     
-        <MainImage clickHandler = {this.applyButtonClicked} />
+          <div>
+            <Header />
 
-        <AboutUs />
+              <Switch>
+                <Route path = '/' component = {HomePage} exact />
+                <Route path = '/documents' component = {Documents} />
+                <Route path = '/apply' component = {ApplyPage} />
+              </Switch>
 
-        <Footer />
-  
-      </React.Fragment>
+            <Footer />
+          </div>
+
+        </BrowserRouter>
     );
-  }
 }
 
 export default App;

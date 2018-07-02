@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import '../App.css';
 
@@ -7,12 +8,12 @@ function  ApplyButton (props) {
     return (
         <div id = 'applyNow'>
 
-            <div 
+            <NavLink 
                 id = 'applyButton'
-                onClick = {() => props.clickHandler()}
+                to = '/apply'
             >
                 APPLY NOW
-            </div>
+            </NavLink>
                            
         </div>
         );

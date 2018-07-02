@@ -5,13 +5,13 @@ h1, h2, h3, h4, h5, h6, p {
 
 /* ---------- HEADER ---------- */
 header {
-  display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0.5em;
   width: 95vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  
 }
 
 #logo {
@@ -26,7 +26,6 @@ header {
   align-items: center;
   justify-content: flex-end;
   flex-wrap: wrap;
-
 }
 
 #navBar a {
@@ -96,6 +95,7 @@ header {
   font-size: 1em;
   padding: 2em;
   cursor: pointer;
+  text-decoration: none;
 }
 
 #applyButton:hover {
@@ -133,12 +133,11 @@ header {
   width: 95vw;
 }
 
-#aboutUsSection h2,  #documentsSection h2{
+#aboutUsSection h2{
   text-align: center;
   font-size: 2em;
   color: #1D0F3A;
   margin-top: 1em; 
-  text-decoration: underline #ffef13;
   /*text-shadow: 0 0 1em #ffef13;*/
 }
 
@@ -157,7 +156,7 @@ header {
   width: 33vw;
   height: 40vh;
   border-radius: 0.5em;
-  border: 0.05em solid #1D0F3A;
+  border: 1px solid #1D0F3A;
   
 }
 
@@ -255,106 +254,203 @@ header {
 }
 
 /* ---------- DOCUMENTS ---------- */
-#documentsSection{
+.slidesInWrapper {
   display: grid;
-  grid-template-columns: 1fr;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2em;
   width: 95vw;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 5em;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-around;
+  grid-gap: 1em;
 }
 
-.Dcontainer {
+.slideInContainer {
   position: relative;
 }
 
-.initailBox {
-  display: block;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2em;
-  width: 95vw;
-  font-family: arial;
-  font-size: 1.1em;
-  color: #404040;
-  border: 0.1em solid #1D0F3A;
-  border-radius:0.5em;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  padding-right: 1em; 
+.slideInMain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+  height: auto;
+  background-color: #1D0F3A;
+  color: #ffef13;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3em;
+  border-radius: 0.5em; 
+  height: 45vh;
 }
 
-.overlay {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.slideOverlay {
   position: absolute;
   bottom: 100%;
   left: 0;
   right: 0;
+  background-color: white;
+  border: 1px solid #1D0F3A;
   overflow: hidden;
   width: 100%;
   height:0;
   transition: .5s ease;
-  background-color: #1D0F3A;
   border-radius: 0.5em;
-  opacity: 0;
-  
 }
 
-.Dcontainer:hover .overlay {
-  opacity: 1;
+.slidesInWrapper:hover .slideOverlay {
   bottom: 0;
   height: 100%;
 }
 
-.Dcontainer:hover .initailBox {
-  height: 50vh;
-  border: none;
-}
-
-
-
-.text {
-  color: #DCDCDC;
-  font-size: 1em;
-  text-align: right;
-  margin: 1em;
-}
-
-.overlay h4 {
-  color: yellow;
-  font-size: 1em;
+.slideInText {
+  color: #1D0F3A;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   text-align: center;
 }
 
-#attentionContainer {
-  display: block;
+
+/* ----------  APPLY PAGE ---------- */
+
+.applyPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 3em;
+  margin-top: 2em;
   width: 95vw;
-  background-color: #E0E0E0;
+  border: 0.1em solid #1D0F3A;
+  box-shadow: 0 0 0.5em #1D0F3A;
   border-radius: 0.5em;
 }
 
-#attention {
-  color: #54110F;
-  text-align: right;
-  margin-right: 0.5em;
-}
-
-.attentionText{
+.formHeader {
+  text-align: center;
+  color: #1D0F3A;
   font-family: arial;
-  font-size: 1em;
-  color: #404040;
-  text-align: right;
-  margin-bottom: 1.5em;
-  margin-right: 0.5em;
+  margin-top: 2em;
+  font-size: 2em;
 }
 
-/* ---------- APPLY BUTTOM AND APPLY PAGE ---------- */
+.applySubmit {
+  display: block;
+  padding: 10px;
+  width: 50vw;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 1m;
+  margin-bottom: 0.5em;
+  font-size: 1.5em;
+  font-family: Raleway;
+  background-color: #1D0F3A;
+  border: #1D0F3A;
+  color: #ffef13;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 0.5em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  cursor: pointer;
+}
+
+.applySubmit:hover {
+ box-shadow: 0 0 0.3em#1D0F3A;
+}
+
+.applyInput {
+  display: block;
+  padding: 10px;
+  width: 50vw;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 1m;
+  margin-bottom: 0.5em;
+  font-size: 1.5em;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+  border-radius: 0.5em;
+}
+
+.applyInput:focus {
+  outline: none;
+  border-radius: 0.5em;
+  box-shadow: 0 0 0.3em #1D0F3A;
+}
+
+.applyLabel {
+  font-family: arial;
+  color: #1D0F3A;
+}
+
+.checkBoxcontainer {
+  display: inline-block;
+  position: relative;
+  padding-left: 1.3em;
+  margin-bottom: 0.5em;
+  cursor: pointer;
+  font-size: 1.5em;
+  color: #1D0F3A;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkBoxcontainer input {
+  visibility: hidden;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #ccc;
+  border-radius: 0.3em; 
+}
+
+/* On mouse-over, add a grey background color */
+.checkBoxcontainer:hover input ~ .checkmark {
+  background-color: #aaaaaa;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkBoxcontainer input:checked ~ .checkmark {
+  background-color: #1D0F3A;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkBoxcontainer input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkBoxcontainer .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid #ffef13;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
 
 @media screen and (max-width: 700px) {
   .aboutUs {   
@@ -371,5 +467,9 @@ header {
 
   .Dcontainer:hover .initailBox {
     height: 80vh;
+  }
+
+  .slidesInWrapper {
+    grid-template-columns: 1fr;
   }
 }

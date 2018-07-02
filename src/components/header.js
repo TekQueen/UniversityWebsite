@@ -1,31 +1,26 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import {NavLink} from 'react-router-dom';
 
 import logo from '../image/logo.png';
 
 import '../App.css';
 
-function Header(props) {
+class Header extends React.Component {
     
-    let aboutUs = `#${props.aboutUsId}`;
-    let documents = `#${props.documentsId}`;
 
+render(){
     return (
         <header>
             <img src = {logo} id = 'logo' alt = 'eua logo' />
 
             <div id = 'navBar'>
-                <a href = {documents}>مدارک</a>
-                <a href = {documents}>رشته ها</a>
-                <a href = {aboutUs}>درباره ی ما</a>
+                <NavLink to = '/documents'>مدارک</NavLink>
+                <NavLink to = ''>رشته ها</NavLink>
+                <NavLink to = '/'>درباره ی ما</NavLink>
             </div>
         </header>
     );
 }
-
-Header.propTypes = {
-    aboutUsId: PropTypes.string.isRequired,
-    documentsId: PropTypes.string.isRequired
 }
 
 export default Header;

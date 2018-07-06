@@ -3,18 +3,15 @@ import PropTypes from 'prop-types';
 
 import '../App.css';
 
-function LongText(props) {
-    return (
+const LongText = ({aboutUsTextHeader, aboutUsText}) => 
         <div className = 'aboutUsSecondSection'>
             <div className = 'aboutUsText'>
-                <h3 className = 'sectionHeader'>{props.aboutUsTextHeader}</h3>
+                <h3 className = 'sectionHeader'>{aboutUsTextHeader}</h3>
                 <span className = 'paragraphSpace'>داگاه</span>
-                {props.aboutUsText}
+                {aboutUsText}
                 <span>.</span>
             </div>
         </div>
-    );
-}
 
 LongText.propTypes = {
     aboutUsText: PropTypes.string.isRequired,

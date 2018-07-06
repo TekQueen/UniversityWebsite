@@ -3,32 +3,18 @@ import React from 'react';
 import FooterLogos from './footerlogos';
 import FooterContent from './footercontent';
 
-import logo from '../image/logo.png';
 import instagram from '../image/instagram.png';
 import facebook from '../image/facebook.png';
 import telegram from '../image/telegram.png';
 
 import '../App.css';
 
-function Footer(props) {
-    return (
+const Footer = () => 
         <div>
-            <div id = 'footerLogo'>
-                <img src = {logo} id = 'logo' alt = 'eua logo'/>
-            </div>
             
-            <div id = 'footer'>
+            <div className = 'footer br lieanerBackground'>
  
             <div id = 'footerFirstPart'>
-
-                <FooterContent 
-                    contentHeader = 'دانشگاه اروپائی'
-                    content = {[
-                        'جمهوری ارمنستان، شهر ایروان– 037',
-                        'خیابان داوید آنهاقت ، پلاک 10',
-                        'تلفن : 241891  0037410',
-                    ]}
-                />
 
                 <FooterContent 
                     contentHeader = 'پست الکترونیکی '
@@ -36,6 +22,15 @@ function Footer(props) {
                     'info@eriicta.com',
                     'www.eriicta.com',
                     'www.era.am',
+                    ]}
+                />
+                
+                <FooterContent 
+                    contentHeader = 'دانشگاه اروپائی'
+                    content = {[
+                        'جمهوری ارمنستان، شهر ایروان– 037',
+                        'خیابان داوید آنهاقت ، پلاک 10',
+                        'تلفن : 241891  0037410',
                     ]}
                 />
                  
@@ -60,7 +55,7 @@ function Footer(props) {
 
             </div>
         </div>
-    );
-}
+ 
+
 
 export default Footer;

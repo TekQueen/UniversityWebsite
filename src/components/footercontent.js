@@ -3,25 +3,19 @@ import PropTypes from 'prop-types';
 
 import '../App.css';
 
-function FooterContent(props) {
-
-    if (props.content) {
-        var contentArray = props.content;
-        contentArray = contentArray.map(
+const FooterContent = ({content, contentLinks, contentHeader}) => 
+        <div>
+            {(content) ? content.map(
             (element, index) => 
             <div 
-                className = 'footerList footerListElement'
+                className = 'footerList'
                 key = {index}
             >
                 {element}
             </div>
-        ); 
-    }
-    
-
-    if (props.contentLinks) {
-        var contentLinksArray = props.contentLinks;
-        contentLinksArray = contentLinksArray.map(
+            ): null}
+            
+            {(contentLinks) ? contentLinks.map(
             (element, index) => 
                 <a
                     className = 'footerList footerListLink'
@@ -29,18 +23,9 @@ function FooterContent(props) {
                 >
                     {element}
                 </a>
-        );
-    }
-
-    return(
-        <div>
-            <h5>{props.contentHeader}</h5>
-            {(contentArray) ? contentArray: null}
-            {(contentLinksArray) ? contentLinksArray: null}
+        ): null}
         </div>
-    );
-}
-
+ 
 FooterContent.proptypes = {
     content: PropTypes.array,
     contentLinks: PropTypes.array

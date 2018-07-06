@@ -1,30 +1,66 @@
-import React from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 import '../App.css';
 
-function SlideIn(props) {
-    return(
-        <div className = 'slideInContainer'>
+class  SlideIn extends Component {
 
-            <div className = 'slideInMain'> 
-             <div>مدارک مورو نیاز برای ثبت نام در دوره پیش دانشگاهی و دوره زبان
-            </div></div>
+    constructor(props) {
+        super(props);
 
-            <div className = 'slideOverlay'>
-                <div className = 'slideInText'>
-                لاس دوازدهم (دیپلم، سوم دبیرستان قدیم مدرک نهایی) 
+        this.state = {
+            isChecked: false,
+        }
 
-ریز نمرات کلاس دوازدهم (دیپلم، سوم دبیرستان قدیم مدرک نهایی) 
+        this.slideInClicked = this.slideInClicked.bind(this);
+    }
 
-شناسنامه
+    slideInClicked() {
+        this.setState( (prevState) => {
+            return {isChecked: !prevState.isChecked}
+        });
+        console.log(this.state.isChecked);
+    }
 
-قطعه عکس سه در چهار 
-                </div>
-            </div>
+    render() {
+        let documentsArray = this.props.documentsArray;
+
+        documentsArray = documentsArray.map(
+            (element, index) => 
+        
+                     <p 
+                        className = 'slideInText'
+                        key = {index}
+                     >
+                        {element}
+                    </p>
             
-        </div>
-    );
+        );
+        
+        return(
+            <div className = 'slideInContainer'>
+
+                <div 
+                    className = 'slideInMain'
+                    onClick = {this.slideInClicked}
+                > 
+                    <div>
+                        {this.props.mainText}
+                    </div>
+                </div>
+
+                {(this.state.isChecked ? 
+                    <div 
+                    className = 'slideOverlay'
+                    onClick = {this.slideInClicked}
+                    >
+                        {documentsArray} 
+                    </div>: null )}
+                
+                
+            </div>
+        );
+    }
 }
 
 export default SlideIn;

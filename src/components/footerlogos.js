@@ -3,27 +3,22 @@ import PropTypes from 'prop-types';
 
 import '../App.css';
 
-function FooterLogos(props) {
-    let imagesArray = props.imagesArray;
-
-    imagesArray = imagesArray.map(
-        (element, index) => 
-            <img
-                className = 'socialMediaLogo'
-                key = {index}
-                src = {element.imageSrc}
-                alt = {element.imageAlt}
-            />
-        
-              
-    );
-
-    return (
+const FooterLogos = ({imagesArray}) =>
         <div className = 'socialMedia'>
-            {imagesArray}
+            {
+                imagesArray.map(
+                    (element, index) => 
+                        <img
+                            className = 'socialMediaLogo'
+                            key = {index}
+                            src = {element.imageSrc}
+                            alt = {element.imageAlt}
+                        />
+                    
+                          
+                )
+            }
         </div>
-    );
-}
 
 FooterLogos.prototype = {
     imagesArray: PropTypes.array

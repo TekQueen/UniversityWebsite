@@ -5,22 +5,16 @@ import logo from '../image/logo.png';
 
 import '../App.css';
 
-class Header extends React.Component {
-    
-
-render(){
-    return (
-        <header>
-            <img src = {logo} id = 'logo' alt = 'eua logo' />
-
-            <div id = 'navBar'>
+const Header = () => 
+        <header className = 'br lieanerBackground'>
+            <div className = 'navBar'>   
                 <NavLink to = '/documents'>مدارک</NavLink>
                 <NavLink to = ''>رشته ها</NavLink>
-                <NavLink to = '/'>درباره ی ما</NavLink>
+                <NavLink to = '/apply'>پیش ثبت نام</NavLink>
+                <NavLink to = '/'>خانه</NavLink>             
+                <img src = {logo} alt = 'eua logo' className = 'logo'/>
             </div>
         </header>
-    );
-}
-}
+
 
 export default Header;

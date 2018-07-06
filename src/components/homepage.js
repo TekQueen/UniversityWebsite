@@ -5,7 +5,7 @@ import AboutUs from './aboutus';
 
 import '../App.css';
 
-function HomePage(props) {
+const HomePage = () => {
     return (
         <React.Fragment>
             <MainImage />

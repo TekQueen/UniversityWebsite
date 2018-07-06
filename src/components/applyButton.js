@@ -3,16 +3,16 @@ import { NavLink } from 'react-router-dom';
 
 import '../App.css';
 
-function  ApplyButton (props) {
+const  ApplyButton  = () => {
 
     return (
         <div id = 'applyNow'>
 
             <NavLink 
-                id = 'applyButton'
+                className = 'applyButton br'
                 to = '/apply'
             >
-                APPLY NOW
+                پیش ثبت نام
             </NavLink>
                            
         </div>

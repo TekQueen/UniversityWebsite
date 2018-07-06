@@ -6,28 +6,26 @@ import MiniImage from './miniImage';
 
 import '../App.css';
 
-function ListOfThingsBox(props) {
-    return(
-        <React.Fragment>
+const ListOfThingsBox = ({sectionHeader, imgSrc, imgAlt, listofthings}) => 
+        <div>
         
-            <h3 className = 'sectionHeader'>{props.sectionHeader}</h3>
+            <h3 className = 'sectionHeader'>{sectionHeader}</h3>
 
                 <div className = 'aboutUs'>
 
                 <MiniImage 
-                    imgSrc = {props.imgSrc}
-                    imgAlt = {props.imgAlt}
+                    imgSrc = {imgSrc}
+                    imgAlt = {imgAlt}
                 />
 
                 <ListOfThings 
-                    listofthings = {props.listofthings}
+                    listofthings = {listofthings}
                 />
             </div>
-        </React.Fragment>
-    );
-}
-
+        </div>
+  
 ListOfThingsBox.proptypes = {
+    sectionHeader: PropTypes.string,
     imgSrc: PropTypes.string,
     imgAlt: PropTypes.string,
     listofthings: PropTypes.array

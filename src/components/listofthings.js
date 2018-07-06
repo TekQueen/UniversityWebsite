@@ -3,27 +3,33 @@ import PropTypes from 'prop-types';
 
 import '../App.css';
 
-function ListOfThings(props) {
-    let listArray = props.listofthings;
-    
-    listArray = listArray.map(
-        (element, index) => <div 
-                                className = 'list'
-                                key = {index}
-                            >  
-                                {element} &#x25CF; 
-                            </div>
-    );
-
-    return (
+const ListOfThings = ({listofthings, isBlue}) =>
         <div>
-            { listArray }     
+            
+            {         
+                listofthings.map(
+                    (element, index) => 
+                                        <div>
+                                            <div 
+                                                className = 'list'
+                                                key = {index}
+                                            >   
+                                                {element} <div 
+                                                            className = {(isBlue ? 'dot blueDot': 'dot')}
+
+                                                          >
+                                                          </div> 
+                                            </div>
+                                        </div>
+                )
+            } 
+              
         </div>
-    );
-}
+ 
 
 ListOfThings.proptypes = {
-    listofthings: PropTypes.string.isRequired
+    listofthings: PropTypes.string.isRequired,
+    isBlue: PropTypes.bool
 }
 
 export default ListOfThings;

@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 
 import '../App.css';
 
-function MiniImage(props) {
+const MiniImage = ({imgSrc, imgAlt}) => {
     return (
         <React.Fragment>
             <img
-                className = 'miniImage' 
-                src = {props.imgSrc}
-                alt = {props.imgAlt}
+                className = 'miniImage br bs' 
+                src = {imgSrc}
+                alt = {imgAlt}
             />
         </React.Fragment>
     );

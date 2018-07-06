@@ -1,56 +1,75 @@
-/* ---------- REST.CSS ---------- */
+body {
+  display: block;
+  width: 95vw;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: arial;
+}
+
+
 h1, h2, h3, h4, h5, h6, p {
   font-family: arial;
 }
 
-/* ---------- HEADER ---------- */
-header {
+.br {
+  border-radius: 0.5em;
+}
+
+.lieanerBackground {
+  background: linear-gradient(#1D0F3A, #373969);
+}
+
+.bs {
+  box-shadow: 0 0 1em #1D0F3A;
+}
+
+/* ---------- Line ---------- */
+
+.line {
+  height: 1px;
+  margin-top: 1em;
+  margin-bottom: 1em;
   margin-left: auto;
   margin-right: auto;
+}
+
+.innerLine {
+  width: 85vw;
+}
+
+/* ---------- HEADER ---------- */
+header {
   margin-top: 0.5em;
-  width: 95vw;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  
 }
 
-#logo {
- width: 90px;
- height: 90px;
-}
-
-/* nav bar */
-
-#navBar {
+.navBar {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   flex-wrap: wrap;
 }
 
-#navBar a {
-  color: #1D0F3A;
-  text-decoration: none;
-  font-size: 1em;
-  padding: 14px 20px;
-  text-align: center;
+.logo {
+  margin: 0.5em;
 }
 
-#navBar a:hover {
+.navBar a {
+  color: #ffef13;
+  text-decoration: none;
+  padding: 14px 20px;
+}
+
+.navBar a:hover {
  text-decoration: underline #ffef13;
 }
 
 /* ---------- MAIN IMAGE(HEADER IMAGE) ---------- */
 
 /* EUA main image*/
-#euaImage {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.euaImage {
   margin-top: 1em;
   width: 95vw;
   height: 80vh;
-  border-radius: 0.5em;
 }
 
 #headerContainer {
@@ -69,7 +88,7 @@ header {
   font-size: 1em;
 }
 
-#headerContainer:hover #euaImage {
+#headerContainer:hover .euaImage {
   opacity: 0.9;
 }
 
@@ -87,18 +106,16 @@ header {
   -ms-transform: translate(-50%, -50%);
 }
 
-#applyButton {
-  background-color: white;
-  border-radius: 0.5em;
+.applyButton {
+  background-color: #DCDCDC;
+  text-decoration: none;
   border: 1px solid #1D0F3A;
   color: #1D0F3A;
-  font-size: 1em;
   padding: 2em;
   cursor: pointer;
-  text-decoration: none;
 }
 
-#applyButton:hover {
+.applyButton:hover {
   box-shadow: 0 0 2em #1D0F3A;
 }
 
@@ -126,11 +143,7 @@ header {
 }
 
 #aboutUsSection {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 0.5em;
-  width: 95vw;
 }
 
 #aboutUsSection h2{
@@ -138,7 +151,6 @@ header {
   font-size: 2em;
   color: #1D0F3A;
   margin-top: 1em; 
-  /*text-shadow: 0 0 1em #ffef13;*/
 }
 
 .sectionHeader {
@@ -155,9 +167,6 @@ header {
 .miniImage {
   width: 33vw;
   height: 40vh;
-  border-radius: 0.5em;
-  border: 1px solid #1D0F3A;
-  
 }
 
 .aboutUsText {
@@ -175,18 +184,14 @@ header {
 .list {
   text-align: right;
   margin-bottom: 1.5em;
+  color: #404040;
+  font-family: arial;
 }
 
 /* ---------- FOOTER ---------- */
 
-#footer {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.footer {
   margin-top: 3em;
-  width: 95vw;
-  background-color: #1D0F3A;
-  border-radius: 0.5em;
 }
 
 #footerFirstPart {
@@ -195,42 +200,20 @@ header {
   align-items: center;
 }
 
-#footerFirstPart > div {
-  margin-top: 2em;
-  margin-bottom: 1em; 
-}
-
-#footerFirstPart h5 {
-  color: #ffef13;
-  font-size: 1em;
-  text-align: right;
-}
-
-#footerLogo {
-  text-align: center;
-  margin-top: 3em; 
-  margin-bottom: -6em;
-}
-
-#footerLogo logo {
-  width: 70px;
-  height: 70px;
-} 
-
 .footerList {
   color: #DCDCDC;
-  font-family: arial;
-  font-size: 1em;
+  text-align: right;
   margin: 0.8em;
 }
 
-.footerListElement {
-  text-align: right;
+.footerListLink {
+  display: block; 
+  text-align: left;
+  cursor: pointer;
 }
 
-.footerListLink {
-  display: block;
-  cursor: pointer;
+.footerListLink:hover {
+  color: #ffef13;
 }
 
 .socialMedia {
@@ -240,12 +223,7 @@ header {
 }
 
 .socialMediaLogo {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 1em;
-  margin-top: 1em;
-  margin-right: 1em;
-  margin-left: 1em;
+  margin: 1em;
 }
 
 .socialMediaLogo:hover {
@@ -254,87 +232,79 @@ header {
 }
 
 /* ---------- DOCUMENTS ---------- */
-.slidesInWrapper {
-  display: grid;
-  width: 95vw;
+
+.documentItemsMenue {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1em;
+  padding-top: 1em;
+}
+.documentItems {
+  color: #1D0F3A;
+  cursor: pointer;
+  padding: 1em;
+  font-size: 1em;
+}
+
+.documentItems:hover {
+  font-weight: bold;
+}
+
+
+
+.documentsWhiteSpace {
+  display: block;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 5em;
-  grid-template-columns: 1fr 1fr;
-  justify-content: space-around;
-  grid-gap: 1em;
+  width: 85vw;
 }
 
-.slideInContainer {
-  position: relative;
-}
-
-.slideInMain {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 1em;
-  height: auto;
-  background-color: #1D0F3A;
-  color: #ffef13;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.3em;
-  border-radius: 0.5em; 
-  height: 45vh;
-}
-
-.slideOverlay {
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-  right: 0;
-  background-color: white;
-  border: 1px solid #1D0F3A;
-  overflow: hidden;
-  width: 100%;
-  height:0;
-  transition: .5s ease;
-  border-radius: 0.5em;
-}
-
-.slidesInWrapper:hover .slideOverlay {
-  bottom: 0;
-  height: 100%;
-}
-
-.slideInText {
+.documentsContent h3 {
+  text-align: right;
   color: #1D0F3A;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
+  font-size: 1.3em;
 }
 
+.documentsAttentionWhiteSpace h2 {
+  text-align: center;
+  font-family: airal;
+  font-size: 1.5em;
+  color: #330701;
+}
+
+.documentsH {
+  font-size: 1.3em;
+  text-align: right;
+  color: #1D0F3A;
+}
+
+
+
+.dot {
+    height: 8px;
+    width: 8px;
+    background-color: #330701;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 0.5em;
+}
+
+.blueDot {
+  background-color: #1D0F3A;
+}
 
 /* ----------  APPLY PAGE ---------- */
 
-.applyPage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2em;
-  width: 95vw;
-  border: 0.1em solid #1D0F3A;
-  box-shadow: 0 0 0.5em #1D0F3A;
-  border-radius: 0.5em;
+.applyInnerPage { 
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 0.5em;
 }
 
 .formHeader {
   text-align: center;
   color: #1D0F3A;
   font-family: arial;
-  margin-top: 2em;
   font-size: 2em;
 }
 
@@ -471,5 +441,11 @@ header {
 
   .slidesInWrapper {
     grid-template-columns: 1fr;
+  }
+
+  .documentItemsMenue {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }

@@ -7,23 +7,23 @@ import ApplyButton from './applyButton';
 
 import '../App.css';
 
-function MainImage(props) {
+const MainImage =({clickHandler}) => {
     return (
         <section id = 'headerContainer'>
         
             <img 
                 src = {euaImage} 
                 alt = 'European University of Armenia' 
-                id = 'euaImage'
+                className = 'euaImage br bs'
             />
 
             <div id = 'headerText'>
                 <h1>
-                    An investment in knowledge pays the best interest.
+                ز گهواره تا گور دانش بجوی
                 </h1>   
             </div>
 
-           <ApplyButton clickHandler = {props.clickHandler} />
+           <ApplyButton clickHandler = {clickHandler} />
           
       
         </section>

@@ -1,10 +1,11 @@
 import React from 'react';
 import '../App.css';
 
-function ApplyPage(props) {
+const ApplyPage = (props) => {
         
         return (
-            <div className = 'applyPage'>
+            <div className = 'br bs'>
+                <div className = 'applyInnerPage'>
                 <h2 className = 'formHeader'>Application form for foreign students 2018-2019 academic year</h2>
                 
                 <div id = 'formContainer'>
@@ -16,16 +17,17 @@ function ApplyPage(props) {
                         <h3 className = 'applyLabel'>Last Name:</h3>
                         <input className = 'applyInput' type = 'text' placeholder = 'Last Name...'/>
 
-                        <h3 className = 'applyLabel'>Middle Name:</h3>
-                        <input className = 'applyInput' type = 'text' placeholder = 'Middle Name...'/>
+                        <h3 className = 'applyLabel'>Father's Name:</h3>
+                        <input className = 'applyInput' type = 'text' placeholder = "Father's Name..."/>
 
                         <h3 className = 'applyLabel'>Date of Birth:</h3>
-                        <input className = 'applyInput' type = 'text' placeholder = 'dd'/>
-                        <input className = 'applyInput' type = 'text' placeholder = 'mm'/>
-                        <input className = 'applyInput' type = 'text' placeholder = 'yyy'/>
+                        <input className = 'applyInput' type = 'text' placeholder = 'Date of Birth...'/>
 
-                        <h3 className = 'applyLabel'>Address:</h3>
-                        <input className = 'applyInput' type = 'text' placeholder = 'Address...'/>
+                        <h3 className = 'applyLabel'>Local Address:</h3>
+                        <input className = 'applyInput' type = 'text' placeholder = 'Local Address...'/>
+
+                        <h3 className = 'applyLabel'>Address in Armenia:</h3>
+                        <input className = 'applyInput' type = 'text' placeholder = 'Address in Armenia...'/>
 
                         <h3 className = 'applyLabel'>Telephone Number:</h3>
                         <input className = 'applyInput' type = 'text' placeholder = 'Telephone Number...'/>
@@ -60,18 +62,33 @@ function ApplyPage(props) {
                             <span className = 'checkmark'></span>
                         </label>
 
+                        <label className = 'checkBoxcontainer'>Arabic
+                            <input type = 'checkbox'/>
+                            <span className = 'checkmark'></span>
+                        </label>
+
                         <h3 className = 'applyLabel'>Education</h3>
-                        <label className = 'checkBoxcontainer'>Secondary
+                        <label className = 'checkBoxcontainer'>High School
                             <input type = 'checkbox'/>
                             <span className = 'checkmark'></span>
                         </label>
 
-                        <label className = 'checkBoxcontainer'>Higher
+                        <label className = 'checkBoxcontainer'>Pre University
                             <input type = 'checkbox'/>
                             <span className = 'checkmark'></span>
                         </label>
 
-                        <label className = 'checkBoxcontainer'>Other
+                        <label className = 'checkBoxcontainer'>Bachelor
+                            <input type = 'checkbox'/>
+                            <span className = 'checkmark'></span>
+                        </label>
+
+                        <label className = 'checkBoxcontainer'>Master
+                            <input type = 'checkbox'/>
+                            <span className = 'checkmark'></span>
+                        </label>
+
+                        <label className = 'checkBoxcontainer'>phD
                             <input type = 'checkbox'/>
                             <span className = 'checkmark'></span>
                         </label>
@@ -85,6 +102,7 @@ function ApplyPage(props) {
 
                         <input type = 'submit' value = 'submit' className = 'applySubmit'/>
                     </form>
+                    </div>
                 </div>
             </div>
         );

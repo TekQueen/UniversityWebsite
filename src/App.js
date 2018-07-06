@@ -14,7 +14,7 @@ import ApplyPage from './components/applyPage';
 
 import './App.css';
 
-function App(props) {
+const App = () => {
     return (
         <BrowserRouter>
 

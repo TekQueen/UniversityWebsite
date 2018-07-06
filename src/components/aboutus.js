@@ -3,13 +3,14 @@ import React from 'react';
 import conferenceRoom from '../image/conferenceRoom.jpg';
 import uniHall from '../image/uniHall.jpg';
 import library from '../image/library.jpg';
+import Line from './line';
 
 import LongText from './longtext';
 import ListOfThingsBox from './listofthingsbox';
 
 import '../App.css';
 
-function AboutUs(props) {
+const AboutUs = () => {
     return (
         <div id = 'aboutUsSection'>
             <h2>دانشگاه اروپایی ارمنستان</h2>
@@ -38,9 +39,10 @@ function AboutUs(props) {
                     '
                 />
 
+                <Line />
                 <ListOfThingsBox 
                     sectionHeader = 'اهداف'
-                    imgSrc = {conferenceRoom}
+                    imgSrc = {uniHall}
                     imgAlt = 'EUA Conference Room'
                     listofthings = {[
                         'تلفیق برنامه های آموزشی ارمنستانی و اروپائی مطابق معیارهای آموزشی بین المللی',
@@ -55,6 +57,7 @@ function AboutUs(props) {
                         'ایجاد مهارت شایسته در امور برقراری تماسها به وسیله چندین زبان'
                     ]}
                 />
+                <Line />
 
 
                 <LongText 
@@ -80,7 +83,8 @@ function AboutUs(props) {
                     با حمایت ویژه فنی اتحادیه اروپا در چهار چوب برنامه های IT.AM در دانشگاه اتاقهای مخصوص رایانه ایجاد گردیده است. اتاقهای مذکورنه تنها با با رایانه های روز مجهزند و تمام شرایط و امکانات تدریس در آنها فراهم است ، بلکه آنها دارای شبکه اینترنتی در سیستم ADSL می باشند. بیش از 150 رایانه در شبکه مرکزی علمی دانشگاه فعالیت می نمایند. وصل شبکه های رایانه ای شعبات شهرهای گیومری ، وانادزور و هرازدان به شبکه  مرکزی علمی دانشگاه در آینده نزدیک مد نظر گرفته شده است.وجود چنین سیستم ، امکانات فراوانی را برای دانشجویان دانشگاه فراهم ساخته و دانشجویان سر کلاسهای درسی با شنیدن و دیدن برنامه های خبری ، تماشای فیلمها و برنامه های قابل درک عموم کشورهای مختلف اروپائی سطح معلومات خویش را ارتقاﺀ می بخشند . در سالهای اخیر در روند تدریس بعضی مضامین تخصصی استانداردهای بین المللی سازماندهی روند تدریس از قبیل ‹‹آموزش  0 ⁄ 2 ›› و ‹‹ آموزش 0 ⁄ 3 ›› به طور موفقانه تعمیم گردیده است . دستاوردهای نوین رایانه ای و فناوریهای اطلاع رسانی جهانی (اینترنت) نه تنها قابل دسترس دانشجویان ، اساتید و کارمندان اداری دانشگاه می باشد ، بلکه در کاربرد شیوه های  علمی شخصی اساتید و اجرای پروژه های تحقیقاتی آنان مفید و درتعمیم سیاست تجدد دانشگاه  موثر واقع می گردد
                     '
                 />
-
+                
+                <Line />
                 <ListOfThingsBox 
                     sectionHeader = '
                     برنامه های آموزشی پیشنهادی دانشگاه'
@@ -101,6 +105,7 @@ function AboutUs(props) {
                         ' حفظ محیط زیست و فناوریهای نو',
                     ]}
                 />
+                <Line />
 
                 <LongText
                     aboutUsText = '
@@ -121,12 +126,13 @@ function AboutUs(props) {
                     
                     ' 
                 />
-
+                
+                <Line />
                  <ListOfThingsBox 
                     sectionHeader = '
                     مزایای تحصیل در ارمنستان
                     '
-                    imgSrc = {uniHall}
+                    imgSrc = {conferenceRoom}
                     imgAlt = 'EUA Hall'
                     listofthings = {[
                         'آموزش عالی با استانداردهای اروپایی با کیفیت بالا و واحدهای مشترک با بیش از 400 دانشگاه اروپایی دنیا',

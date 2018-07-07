@@ -49,14 +49,11 @@ header {
   flex-wrap: wrap;
 }
 
-.logo {
-  margin: 0.5em;
-}
-
 .navBar a {
   color: #ffef13;
   text-decoration: none;
-  padding: 14px 20px;
+  padding-right: 1em;
+  padding-left: 1em; 
 }
 
 .navBar a:hover {
@@ -293,6 +290,7 @@ header {
   background-color: #1D0F3A;
 }
 
+
 /* ----------  APPLY PAGE ---------- */
 
 .applyInnerPage { 
@@ -447,5 +445,14 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 0.8em;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .navBar {
+    line-height: 4em;
   }
 }

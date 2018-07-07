@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 
 import HomePage from './components/homepage';
-import Documents from './components/documents';
+import Documents from './containers/documents';
 import Header from './components/header';
 import Footer from './components/footer';
 import ApplyPage from './components/applyPage';

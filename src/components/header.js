@@ -12,7 +12,9 @@ const Header = () =>
                 <NavLink to = ''>رشته ها</NavLink>
                 <NavLink to = '/apply'>پیش ثبت نام</NavLink>
                 <NavLink to = '/'>خانه</NavLink>             
-                <img src = {logo} alt = 'eua logo' className = 'logo'/>
+                <NavLink to = '/'>
+                    <img src = {logo} alt = 'eua logo' className = 'logo'/>
+                </NavLink>  
             </div>
         </header>
 

@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 
-import DocumentsHeader from './documentsheader';
-import DocumentsAttention from './documentsAttention';
-import DocumentsMainPart from './documentsmainpart';
-import Line from './line';
+import DocumentsHeader from '../components/documentsheader';
+import DocumentsAttention from '../components/documentsAttention';
+import DocumentsMainPart from '../components/documentsmainpart';
+import Line from '../components/line';
 
 import '../App.css';
 
@@ -20,15 +20,28 @@ class Documents extends Component {
     }
 
     itemClicked(index) {
+
         let arr = [0, 0, 0, 0];
         arr[index] = 1;
 
         this.setState(
-            (prevState) => {
-                return {shouldShown: arr}
-            }
+            (prevState) => {  
+            
+                for ( let i = 0; i < arr.length; i++) {
+                    if (arr[i] !== prevState.shouldShown[i]) {
+                        return {
+                            shouldShown: arr,
+                        }
+                    }  
+                        
+                }
+                return {
+                    shouldShown: [0, 0, 0, 0]
+                }
+            }     
         );
     }
+            
 
     render() {
         return (
@@ -37,11 +50,12 @@ class Documents extends Component {
 
                       <DocumentsHeader
                             itemClicked = {this.itemClicked}
-                            documentItems = {[
-                                'پیش دانشگاهی و دوره زبان',
-                                'مقطع کارشناسی',
+                            documentItems = {[ 
+                                'مقطع  دکترا',                              
                                 'کارشناسی ارشد',
-                                'مقطع  دکترا',
+                                'پیش دانشگاهی وکارشناسی',                   
+                                'زبان المانی',
+
                             ]} 
                         />
                         <div className = 'line innerLine'>

@@ -5,51 +5,30 @@ import DocumentsAttention from '../components/documentsAttention';
 import DocumentsMainPart from '../components/documentsmainpart';
 import Line from '../components/line';
 
+import {setDocumentItemClicked} from '../actions/actions';
+import {connect} from 'react-redux';
+
 import '../App.css';
+
+const mapStateToProps = state => ({
+    shouldShown: state.shouldShown,
+})
+
+const mapDispatchToProps = dispatch => ({
+    onDocumentItemClicked: (index) => dispatch(setDocumentItemClicked(index)),
+})
 
 class Documents extends Component {
 
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            shouldShown: [0, 0, 0, 0]
-        }
-
-        this.itemClicked = this.itemClicked.bind(this);
-    }
-
-    itemClicked(index) {
-
-        let arr = [0, 0, 0, 0];
-        arr[index] = 1;
-
-        this.setState(
-            (prevState) => {  
-            
-                for ( let i = 0; i < arr.length; i++) {
-                    if (arr[i] !== prevState.shouldShown[i]) {
-                        return {
-                            shouldShown: arr,
-                        }
-                    }  
-                        
-                }
-                return {
-                    shouldShown: [0, 0, 0, 0]
-                }
-            }     
-        );
-    }
-            
-
     render() {
+        const {shouldShown, onDocumentItemClicked} = this.props;
+
         return (
             <div>
                 <div className = 'br bs'>
 
                       <DocumentsHeader
-                            itemClicked = {this.itemClicked}
+                            itemClicked = {onDocumentItemClicked}
                             documentItems = {[ 
                                 'مقطع  دکترا',                              
                                 'کارشناسی ارشد',
@@ -65,7 +44,7 @@ class Documents extends Component {
                     <div className = 'documentsWhiteSpace'>
 
                         <DocumentsMainPart
-                            itemToBeShown = {this.state.shouldShown} 
+                            itemToBeShown = {shouldShown} 
                         />
 
                         <DocumentsAttention />
@@ -76,4 +55,4 @@ class Documents extends Component {
     }
 }
 
-export default Documents;
+export default connect(mapStateToProps, mapDispatchToProps)(Documents);

@@ -10,7 +10,7 @@ const FooterContent = ({content, contentLinks, contentHeader}) =>
             <div 
                 className = 'footerList'
                 key = {index}
-            >    return (
+            >    
                 {element}
             </div>
             ): null}

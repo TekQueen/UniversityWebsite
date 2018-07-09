@@ -1,6 +1,5 @@
 import React from 'react';
 
-import conferenceRoom from '../image/conferenceRoom.jpg';
 import uniHall from '../image/uniHall.jpg';
 import library from '../image/library.jpg';
 import Line from './line';
@@ -132,8 +131,6 @@ const AboutUs = () => {
                     sectionHeader = '
                     مزایای تحصیل در ارمنستان
                     '
-                    imgSrc = {conferenceRoom}
-                    imgAlt = 'EUA Hall'
                     listofthings = {[
                         'آموزش عالی با استانداردهای اروپایی با کیفیت بالا و واحدهای مشترک با بیش از 400 دانشگاه اروپایی دنیا',
                         'هزینه مناسب نسبت به کشورهای اروپایی برای ادامه تحصیل',

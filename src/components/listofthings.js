@@ -9,16 +9,16 @@ const ListOfThings = ({listofthings, isBlue}) =>
             {         
                 listofthings.map(
                     (element, index) => 
-                                            <div 
-                                                className = 'list'
-                                                key = {index}
-                                            >   
-                                                {element}
-                                                    <div 
-                                                        className = {(isBlue ? 'dot blueDot': 'dot')}
-                                                    >
-                                                    </div>
-                                            </div>
+                                <div 
+                                        className = 'list'
+                                        key = {index}
+                                    >   
+                                        {element}
+                                    <div 
+                                        className = {(isBlue ? 'dot blueDot': 'dot')}
+                                    >
+                                    </div>
+                                </div>
                                         
                 )
             } 

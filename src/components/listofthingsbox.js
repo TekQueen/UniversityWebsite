@@ -11,12 +11,19 @@ const ListOfThingsBox = ({sectionHeader, imgSrc, imgAlt, listofthings}) =>
         
             <h3 className = 'sectionHeader'>{sectionHeader}</h3>
 
-                <div className = 'aboutUs'>
+                <div 
+                className = {(imgSrc) ?  'aboutUs' : null}
+                >
 
-                <MiniImage 
-                    imgSrc = {imgSrc}
-                    imgAlt = {imgAlt}
-                />
+                {
+                    ((imgSrc) ? 
+                        <MiniImage 
+                            imgSrc = {imgSrc}
+                            imgAlt = {imgAlt}
+                        />
+                        : null
+                    )
+                }
 
                 <ListOfThings 
                     listofthings = {listofthings}

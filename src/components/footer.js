@@ -15,15 +15,6 @@ const Footer = () =>
             <div className = 'footer br lieanerBackground'>
  
             <div id = 'footerFirstPart'>
-
-                <FooterContent 
-                    contentHeader = 'پست الکترونیکی '
-                    contentLinks = {[
-                    'info@eriicta.com',
-                    'www.eriicta.com',
-                    'www.era.am',
-                    ]}
-                />
                 
                 <FooterContent 
                     contentHeader = 'دانشگاه اروپائی'
@@ -31,6 +22,16 @@ const Footer = () =>
                         'جمهوری ارمنستان، شهر ایروان– 037',
                         'خیابان داوید آنهاقت ، پلاک 10',
                         'تلفن : 241891  0037410',
+                    ]}
+                />
+
+                <FooterContent 
+                    contentHeader = 'پست الکترونیکی '
+                    contentLinks = {[
+                        {
+                            link: 'www.era.am',
+                            to: 'http://eua.am/'
+                        }
                     ]}
                 />
                  
@@ -44,7 +45,8 @@ const Footer = () =>
                         },                       
                         {
                             imageSrc: `${facebook}`,
-                            imageAlt: `facebook logo`
+                            imageAlt: `facebook logo`,
+                            linkTo: `https://www.facebook.com/Euauniversity/`
                         },                        
                         {
                             imageSrc: `${telegram}`,

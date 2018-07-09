@@ -3,19 +3,21 @@ import PropTypes from 'prop-types';
 
 import '../App.css';
 
-const FooterLogos = ({imagesArray}) =>
+const FooterLogos = ({imagesArray, linkTo}) =>
         <div className = 'socialMedia'>
             {
                 imagesArray.map(
                     (element, index) => 
-                        <img
-                            className = 'socialMediaLogo'
+                        <a 
                             key = {index}
-                            src = {element.imageSrc}
-                            alt = {element.imageAlt}
-                        />
-                    
-                          
+                            href = {element.linkTo}
+                        >
+                            <img
+                                className = 'socialMediaLogo'
+                                src = {element.imageSrc}
+                                alt = {element.imageAlt}
+                            />
+                        </a>                
                 )
             }
         </div>

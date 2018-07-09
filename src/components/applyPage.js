@@ -4,7 +4,7 @@ import '../App.css';
 const ApplyPage = (props) => {
         
         return (
-            <div className = 'br bs'>
+            <div className = 'br bs animatedText'>
                 <div className = 'applyInnerPage'>
                 <h2 className = 'formHeader'>Application form for foreign students 2018-2019 academic year</h2>
                 

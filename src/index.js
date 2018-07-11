@@ -6,14 +6,17 @@ import registerServiceWorker from './registerServiceWorker';
 
 import {
     createStore,
-    applyMiddleware
+    applyMiddleware,
+    combineReducers
 } from 'redux';
 import {Provider} from 'react-redux';
 import {onDocumentItemClicked} from './reducers/reducers';
+import {onInputChange, onItemChecked} from './form/reducers/reducers';
 import {createLogger} from 'redux-logger';
 
 const logger = createLogger();
-const store = createStore(onDocumentItemClicked, applyMiddleware(logger));
+const rootReducer = combineReducers({onDocumentItemClicked, onInputChange, onItemChecked});
+const store = createStore(rootReducer, applyMiddleware(logger));
 
 ReactDOM.render(
     <Provider store = {store}>

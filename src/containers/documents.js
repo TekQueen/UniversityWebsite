@@ -11,7 +11,7 @@ import {connect} from 'react-redux';
 import '../App.css';
 
 const mapStateToProps = state => ({
-    shouldShown: state.shouldShown,
+    shouldShown: state.onDocumentItemClicked.shouldShown,
 })
 
 const mapDispatchToProps = dispatch => ({

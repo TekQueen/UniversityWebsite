@@ -5,14 +5,6 @@ import PropTypes from 'prop-types';
 // container
 
 class Checkboxes extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            canBeChecked: true
-        }
-    }
-
     render() {
         let {header, checkboxes, canCheck} = this.props;
 
@@ -27,7 +19,6 @@ class Checkboxes extends Component {
                                 element = {element}
                                 checkboxId = {element}
                                 checkboxName = {element}
-                                canBeChecked = {this.state.canBeChecked}
                             />
                     )
                 }

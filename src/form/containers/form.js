@@ -2,125 +2,173 @@ import React, {Component} from 'react';
 
 import Inputs from './inputs';
 import Checkboxes from './checkboxes';
+import Submit from '../components/submit';
 
-//container
+import {connect} from 'react-redux';
+import {setInputChante} from '../actions/actions';
+
+const mapStateToProps = state => ({
+    name: state.onInputChange.name,
+    lastName: state.onInputChange.lastName,
+    fatherName: state.onInputChange.fatherName,
+    dateOfBirth: state.onInputChange.dateOfBirth,
+    localAddress: state.onInputChange.localAddress,
+    addressInArmenia: state.onInputChange.addressInArmenia,
+    telephoneNumber: state.onInputChange.telephoneNumber,
+    emailAddress: state.onInputChange.emailAddress
+})
+
+const mapDispatchToProps = dispatch => ({
+    handleChange: (event, val) => dispatch(setInputChante(event.target.value, val))
+})
 
 class Form extends Component {
 
-    constructor(props) {
-        super(props);
+    handleSubmit = (event) => { 
+        event.preventDefault();
+        console.log('submit');
     }
-    
+
     render() {
+
+        let {
+            name,
+            lastName,
+            fatherName,
+            dateOfBirth,
+            localAddress,
+            addressInArmenia,
+            telephoneNumber,
+            emailAddress,
+            handleChange
+        } = this.props;
+
         return (
-            <form >
+            <form onSubmit = {this.handleSubmit}>
 
-                <Inputs 
-                    inputLabel = 'Name:'
-                    inputType = 'text'
-                    inputPlaceHolder = 'Name...'
-                    inputId = 'nameInput'
-                    inputName = 'nameInput'
-                />
+            <Inputs 
+                inputLabel = 'Name:'
+                inputType = 'text'
+                inputPlaceHolder = 'Name...'
+                inputId = 'nameInput'
+                inputName = 'nameInput'
+                value = {name}
+                handleChange = {(event) => handleChange(event, 'name')}
+            />
 
-                <Inputs 
-                    inputLabel = 'Last Name:'
-                    inputType = 'text'
-                    inputPlaceHolder = 'Last Name...'
-                    inputId = 'laseNameInput'
-                    inputName = 'laseNameInput'
-                />
+            <Inputs 
+                inputLabel = 'Last Name:'
+                inputType = 'text'
+                inputPlaceHolder = 'Last Name...'
+                inputId = 'laseNameInput'
+                inputName = 'laseNameInput'
+                value = {lastName}
+                handleChange = {(event) => handleChange(event, 'lastName')}
+            />
 
-                <Inputs 
-                    inputLabel = "Father's Name:"
-                    inputType = 'text'
-                    inputPlaceHolder = "Father's Name..."
-                    inputId = 'fatherNameInput'
-                    inputName = 'fatherNameInput'
-                />
+            <Inputs 
+                inputLabel = "Father's Name:"
+                inputType = 'text'
+                inputPlaceHolder = "Father's Name..."
+                inputId = 'fatherNameInput'
+                inputName = 'fatherNameInput'
+                value = {fatherName}
+                handleChange = {(event) => handleChange(event, 'fatherName')}
+            />
 
-                <Inputs 
-                    inputLabel = 'Date of Birth:'
-                    inputType = 'text'
-                    inputPlaceHolder = 'Date of Birth...'
-                    inputId = 'dateOfBirthInput'
-                    inputName = 'dateOfBirthInput'
-                />
+            <Inputs 
+                inputLabel = 'Date of Birth:'
+                inputType = 'text'
+                inputPlaceHolder = 'Date of Birth...'
+                inputId = 'dateOfBirthInput'
+                inputName = 'dateOfBirthInput'
+                value = {dateOfBirth}
+                handleChange = {(event) => handleChange(event, 'dateOfBirth')}
+            />
 
-                <Inputs 
-                    inputLabel = 'Local Address:'
-                    inputType = 'text'
-                    inputPlaceHolder = 'Local Address...'
-                    inputId = 'localAddressInput'
-                    inputName = 'localAddressInput'
-                />
+            <Inputs 
+                inputLabel = 'Local Address:'
+                inputType = 'text'
+                inputPlaceHolder = 'Local Address...'
+                inputId = 'localAddressInput'
+                inputName = 'localAddressInput'
+                value = {localAddress}
+                handleChange = {(event) => handleChange(event, 'localAddress')}
+            />
 
-                <Inputs 
-                    inputLabel = 'Address in Armenia:'
-                    inputType = 'text'
-                    inputPlaceHolder = 'Address in Armenia...'
-                    inputId = 'addressInArmeniaInput'
-                    inputName = 'addressInArmeniaInput'
-                />
+            <Inputs 
+                inputLabel = 'Address in Armenia:'
+                inputType = 'text'
+                inputPlaceHolder = 'Address in Armenia...'
+                inputId = 'addressInArmeniaInput'
+                inputName = 'addressInArmeniaInput'
+                value = {addressInArmenia}
+                handleChange = {(event) => handleChange(event, 'addressInArmenia')}
+            />
 
-                <Inputs 
-                    inputLabel = 'Telephone Number:'
-                    inputType = 'text'
-                    inputPlaceHolder = 'Telephone Number...'
-                    inputId = 'telephoneNumberInput'
-                    inputName = 'telephoneNumberInput'
-                />
+            <Inputs 
+                inputLabel = 'Telephone Number:'
+                inputType = 'text'
+                inputPlaceHolder = 'Telephone Number...'
+                inputId = 'telephoneNumberInput'
+                inputName = 'telephoneNumberInput'
+                value = {telephoneNumber}
+                handleChange = {(event) => handleChange(event, 'telephoneNumber')}
+            />
 
-                <Inputs 
-                    inputLabel = 'Email Adress:'
-                    inputType = 'email'
-                    inputPlaceHolder = 'Email Adress...'
-                    inputId = 'emailInput'
-                    inputName = 'emailInput'
-                />
+            <Inputs 
+                inputLabel = 'Email Adress:'
+                inputType = 'email'
+                inputPlaceHolder = 'Email Adress...'
+                inputId = 'emailInput'
+                inputName = 'emailInput'
+                value = {emailAddress}
+                handleChange = {(event) => handleChange(event, 'emailAddress')}
+            />
 
-                <Checkboxes 
-                    header = 'Gender'
-                    canCheck = {false}
-                    checkboxes = {[
-                        'Female',
-                        'Male'
-                    ]}
-                />
+            <Checkboxes 
+                header = 'Gender'
+                canCheck = {false}
+                checkboxes = {[
+                    'Female',
+                    'Male'
+                ]}
+            />
 
-                <Checkboxes 
-                    header = 'Foreign language studied at school'
-                    checkboxes = {[
-                        'Persian',
-                        'English',
-                        'French',
-                        'German',
-                        'Arabic'
-                    ]}
-                />
+            <Checkboxes 
+                header = 'Foreign language studied at school'
+                checkboxes = {[
+                    'Persian',
+                    'English',
+                    'French',
+                    'German',
+                    'Arabic'
+                ]}
+            />
 
-                <Checkboxes 
-                    header = 'Education'
-                    checkboxes = {[
-                        'High School',
-                        'Pre University',
-                        'Bachelor',
-                        'Master',
-                        'phD'
-                    ]}
-                />
+            <Checkboxes 
+                header = 'Education'
+                checkboxes = {[
+                    'High School',
+                    'Pre University',
+                    'Bachelor',
+                    'Master',
+                    'phD'
+                ]}
+            />
 
-                <Checkboxes 
-                    checkboxes = {[
-                        'I declare that the above given information is correct to the best of my knowledge.',
-                    ]}
-                />
-
-                <input type = 'submit' value = 'submit' className = 'applySubmit'/>
-            </form>
+            <Checkboxes 
+                checkboxes = {[
+                    'I declare that the above given information is correct to the best of my knowledge.',
+                ]}
+            />
+            
+            <Submit />
+            
+        </form>
 
         );
     }
 }
-
-export default Form;
+        
+export default connect(mapStateToProps, mapDispatchToProps)(Form);

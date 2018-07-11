@@ -1,31 +1,30 @@
 import React, {Component} from 'react';
 
+import {connect} from 'react-redux';
+import {setItemChecked} from '../actions/actions';
+
 //container
 
+const mapStateToProps = state => ({
+    checked: state.onItemChecked.checked,
+    content: state.onItemChecked.content
+})
+
+const mapDispatchToProps = dispatch => ({
+    handleChange: (event) => dispatch(setItemChecked(event.target.value)),
+})
+
 class Checkbox extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            checked: '',
-            content: this.props.element,
-        }
-    }
-
-    handleChange = (event) => {
-        if(this.props.canBeChecked) {
-            event.persist();
-                this.setState(prevState => {
-                    return {
-                        checked: event.target.checked,
-                        canBeChecked: !prevState.canBeChecked
-                    }
-                }, () => console.log(this.state.checked, ' ', this.state.content));
-        }  
-    }
 
     render() {
-        let {element, checkboxName, checkboxId} = this.props;
+        let {
+                element, 
+                checkboxName, 
+                checkboxId,
+                checked,
+                content,
+                handleChange
+            } = this.props;
 
         return(
             <label 
@@ -35,8 +34,8 @@ class Checkbox extends Component {
                 name = {checkboxName}
                 id = {checkboxId} 
                 type = 'checkbox'
-                checked = {this.state.checked}
-                onChange = {this.handleChange}
+                checked = {checked}
+                onChange = {handleChange}
             />
             <span className = 'checkmark'></span>
             </label>
@@ -44,4 +43,4 @@ class Checkbox extends Component {
     }
 }
 
-export default Checkbox;
+export default connect(mapStateToProps, mapDispatchToProps)(Checkbox);

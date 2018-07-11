@@ -1,25 +1,7 @@
 import React,{Component} from 'react';
 import PropTypes from 'prop-types';
 
-// containers, 
-
 class Inputs  extends Component  {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            value: '',
-        }
-    }
-    
-    handleChange = (event) => {
-        event.persist();
-        this.setState(prevState => {
-            return {
-                value: event.target.value
-            }
-        }, () => console.log(this.state.value));     
-    }
 
     render() {
          let { 
@@ -27,7 +9,9 @@ class Inputs  extends Component  {
             inputType, 
             inputPlaceHolder, 
             inputId, 
-            inputName
+            inputName,
+            value,
+            handleChange
             } = this.props;
 
         return(
@@ -39,9 +23,8 @@ class Inputs  extends Component  {
                     name = {inputName}
                     type = {inputType}
                     placeholder = {inputPlaceHolder}
-                    onChange = {this.handleChange}
-                    value = {this.state.value}
-                    required
+                    onChange = {handleChange}
+                    value = {value}
                 />
             </div>
         );

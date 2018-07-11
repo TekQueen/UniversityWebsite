@@ -23,6 +23,17 @@ h1, h2, h3, h4, h5, h6, p {
   box-shadow: 0 0 1em #1D0F3A;
 }
 
+.animatedText {
+  opacity: 1;
+  animation: Fade 2s ease;
+  color: #404040;
+}
+
+@keyframes Fade {
+  0%{ opacity: 0 }
+  100% { opacity: 1 }
+}
+
 /* ---------- Line ---------- */
 
 .line {
@@ -44,6 +55,7 @@ header {
 
 .navBar {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: flex-end;
   flex-wrap: wrap;
@@ -161,6 +173,10 @@ header {
   justify-content: space-between;
 }
 
+.singleAboutUs{
+
+}
+
 .miniImage {
   width: 33vw;
   height: 40vh;
@@ -193,19 +209,19 @@ header {
 
 #footerFirstPart {
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  flex-direction: column;
 }
 
 .footerList {
   color: #DCDCDC;
-  text-align: right;
+  text-align: center;
   margin: 0.8em;
 }
 
 .footerListLink {
   display: block; 
-  text-align: left;
+  text-align: center;
   cursor: pointer;
 }
 
@@ -256,10 +272,9 @@ header {
   width: 85vw;
 }
 
-.documentsContent h3 {
-  text-align: right;
+.documentsContentH1 {
+  text-align: center;
   color: #1D0F3A;
-  font-size: 1.3em;
 }
 
 .documentsAttentionWhiteSpace h2 {
@@ -420,6 +435,16 @@ header {
   transform: rotate(45deg);
 }
 
+/* ----------  MAJORS ---------- */
+
+.majorContainer {
+  margin-top: 1em;
+}
+
+.majorsH {
+  text-align: center;
+  color: #1D0F3A;
+}
 @media screen and (max-width: 700px) {
   .aboutUs {   
     flex-direction: column;
@@ -448,11 +473,18 @@ header {
     font-size: 0.8em;
   }
 
-  .logo {
-    display: none;
+  .navBar {
+    flex-direction: row-reverse;
+    line-height: 2em;
+    justify-content: space-between;
+    align-items: flex-end;
   }
 
-  .navBar {
-    line-height: 4em;
+  .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: right;
   }
+
 }

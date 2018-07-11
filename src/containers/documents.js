@@ -24,8 +24,7 @@ class Documents extends Component {
         const {shouldShown, onDocumentItemClicked} = this.props;
 
         return (
-            <div>
-                <div className = 'br bs'>
+                <div className = 'br bs animatedText'>
 
                       <DocumentsHeader
                             itemClicked = {onDocumentItemClicked}
@@ -50,7 +49,6 @@ class Documents extends Component {
                         <DocumentsAttention />
                     </div>                                
                 </div>             
-            </div>
         );
     }
 }

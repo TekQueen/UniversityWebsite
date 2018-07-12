@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 
-import Inputs from './inputs';
-import Checkboxes from './checkboxes';
+import Inputs from '../components/inputs';
+import Checkboxes from '../components/checkboxes';
 import Submit from '../components/submit';
 
 import {connect} from 'react-redux';
-import {setInputChante} from '../actions/actions';
+import {setInputChante, setItemChecked} from '../actions/actions';
 
 const mapStateToProps = state => ({
     name: state.onInputChange.name,
@@ -15,11 +15,14 @@ const mapStateToProps = state => ({
     localAddress: state.onInputChange.localAddress,
     addressInArmenia: state.onInputChange.addressInArmenia,
     telephoneNumber: state.onInputChange.telephoneNumber,
-    emailAddress: state.onInputChange.emailAddress
+    emailAddress: state.onInputChange.emailAddress,
+    checkedItems: state.onItemChecked.checkedItems
 })
 
 const mapDispatchToProps = dispatch => ({
-    handleChange: (event, val) => dispatch(setInputChante(event.target.value, val))
+    handleChange: (event, val) => dispatch(setInputChante(event.target.value, val)),
+    handleClicked: (event, val) => dispatch(setItemChecked(event.target.name, val))
+
 })
 
 class Form extends Component {
@@ -40,7 +43,9 @@ class Form extends Component {
             addressInArmenia,
             telephoneNumber,
             emailAddress,
-            handleChange
+            handleChange,
+            checkedItems,
+            handleClicked
         } = this.props;
 
         return (
@@ -133,6 +138,7 @@ class Form extends Component {
                     'Female',
                     'Male'
                 ]}
+                handleChange = {(event) => handleClicked(event, checkedItems)}
             />
 
             <Checkboxes 
@@ -144,6 +150,7 @@ class Form extends Component {
                     'German',
                     'Arabic'
                 ]}
+                handleChange = {(event) => handleClicked(event, checkedItems)}
             />
 
             <Checkboxes 
@@ -155,12 +162,14 @@ class Form extends Component {
                     'Master',
                     'phD'
                 ]}
+                handleChange = {(event) => handleClicked(event, checkedItems)}
             />
 
             <Checkboxes 
                 checkboxes = {[
                     'I declare that the above given information is correct to the best of my knowledge.',
                 ]}
+                handleChange = {(event) => handleClicked(event, checkedItems)}
             />
             
             <Submit />

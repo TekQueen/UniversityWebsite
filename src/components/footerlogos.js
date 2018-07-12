@@ -22,7 +22,7 @@ const FooterLogos = ({imagesArray, linkTo}) =>
             }
         </div>
 
-FooterLogos.prototype = {
+FooterLogos.propTypes = {
     imagesArray: PropTypes.array
 }
 

@@ -27,7 +27,7 @@ const DocumentsMainPart = ({itemToBeShown}) =>
             
         </div>
 
-DocumentsMainPart.proptypes = {
+DocumentsMainPart.propTypes = {
     itemToBeShown: PropTypes.array,
 }
 

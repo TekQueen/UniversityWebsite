@@ -18,7 +18,7 @@ const EachDocumentSection = ({header, listofthings}) =>
         </div>
     </div>
 
-EachDocumentSection.proptypes = {
+EachDocumentSection.propTypes = {
     header: PropTypes.string,
     listofthings: PropTypes.array
 }

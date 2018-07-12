@@ -7,7 +7,8 @@ import {
     SET_INPUT_CHANGE_ADDRESSINARMENIA,
     SET_INPUT_CHANGE_TELEPHONENUMBER,
     SET_INPUT_CHANGE_EMAILADDRESS,
-    SET_ITEM_CHECKED
+    SET_ITEM_CHECKED,
+    SET_ITEM_UNCHECKED
 } from '../constants/constants';
 
 
@@ -55,11 +56,26 @@ export const setInputChante = (text, val) => {
                 type: SET_INPUT_CHANGE_EMAILADDRESS,
                 payload: text
             }
+        default: 
+            return null;
     }
 }
 
 // checkbox
-export const setItemChecked = (isChecked, content) => ({
-    type: SET_ITEM_CHECKED,
-    payload: [isChecked, content]
-})
+export const setItemChecked = (text, checkedItems) => {
+    for (let i = 0; i < checkedItems.length; i++) {
+        if (checkedItems[i] === text) {
+            let arr = checkedItems;
+            arr.splice(i, 1);
+            return {
+                type:SET_ITEM_UNCHECKED,
+                payload: arr
+            }
+        }
+    }
+
+    return {
+        type: SET_ITEM_CHECKED,
+        payload: [text]
+    }
+}

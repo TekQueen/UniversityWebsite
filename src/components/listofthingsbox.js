@@ -31,7 +31,7 @@ const ListOfThingsBox = ({sectionHeader, imgSrc, imgAlt, listofthings}) =>
             </div>
         </div>
   
-ListOfThingsBox.proptypes = {
+ListOfThingsBox.propTypes = {
     sectionHeader: PropTypes.string,
     imgSrc: PropTypes.string,
     imgAlt: PropTypes.string,

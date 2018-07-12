@@ -19,7 +19,7 @@ const DocumentsHeader  = ({documentItems, itemClicked}) =>
                 }
             </div>
         
-DocumentsHeader.proptypes = {
+DocumentsHeader.propTypes = {
     documentItems: PropTypes.array,
     itemClicked: PropTypes.func
 }

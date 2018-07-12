@@ -26,8 +26,8 @@ const ListOfThings = ({listofthings, isBlue}) =>
         </div>
  
 
-ListOfThings.proptypes = {
-    listofthings: PropTypes.string.isRequired,
+ListOfThings.propTypes = {
+    listofthings: PropTypes.array.isRequired,
     isBlue: PropTypes.bool
 }
 

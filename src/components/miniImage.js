@@ -15,7 +15,7 @@ const MiniImage = ({imgSrc, imgAlt}) => {
     );
 }
 
-MiniImage.proptypes = {
+MiniImage.propTypes = {
     imgSrc: PropTypes.string.isRequired,
     imgAlt: PropTypes.string.isRequired
 }

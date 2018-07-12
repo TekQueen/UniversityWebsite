@@ -1,14 +1,11 @@
-import React,{Component} from 'react';
+import React from 'react';
 import Checkbox from './Checkbox';
 import PropTypes from 'prop-types';
 
 // container
 
-class Checkboxes extends Component {
-    render() {
-        let {header, checkboxes, canCheck} = this.props;
+const Checkboxes = ({header, checkboxes, handleChange}) => 
 
-        return(
             <div>
                 <h3 className = 'applyLabel'>{header}</h3>
                 {
@@ -17,14 +14,16 @@ class Checkboxes extends Component {
                             <Checkbox
                                 key = {index} 
                                 element = {element}
-                                checkboxId = {element}
                                 checkboxName = {element}
+                                handleChange = {handleChange}
                             />
                     )
                 }
             </div>
-        );
-    }
+ 
+Checkboxes.propTypes = {
+    header: PropTypes.string,
+    checkboxes: PropTypes.array,  
+    handleChange: PropTypes.func
 }
-
 export default Checkboxes;

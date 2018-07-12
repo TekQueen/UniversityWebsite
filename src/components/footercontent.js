@@ -28,7 +28,7 @@ const FooterContent = ({content, contentLinks, contentHeader}) =>
         ): null}
         </div>
  
-FooterContent.proptypes = {
+FooterContent.propTypes = {
     content: PropTypes.array,
     contentLinks: PropTypes.array
 }

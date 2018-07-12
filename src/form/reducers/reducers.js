@@ -7,7 +7,8 @@ import {
     SET_INPUT_CHANGE_ADDRESSINARMENIA,
     SET_INPUT_CHANGE_TELEPHONENUMBER,
     SET_INPUT_CHANGE_EMAILADDRESS,
-    SET_ITEM_CHECKED
+    SET_ITEM_CHECKED,
+    SET_ITEM_UNCHECKED
 } from '../constants/constants';
 
 const initialStateInput = {
@@ -45,17 +46,15 @@ export const onInputChange = (state = initialStateInput, action = {}) => {
 }
 
 const initialStateChecked = {
-    checked: '',
-    content: '',
+    checkedItems: []
 }
 
 export const onItemChecked = (state = initialStateChecked, action = {}) => {
     switch(action.type) {
         case SET_ITEM_CHECKED:
-            return Object.assign({}, state, {
-                checked: action.payload[0],
-                content: action.payload[1]
-            })
+            return Object.assign({}, state, {checkedItems: state.checkedItems.concat(action.payload)});
+        case SET_ITEM_UNCHECKED:
+            return  Object.assign({}, state, {checkedItems: action.payload});
         default:
             return state;
     }

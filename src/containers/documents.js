@@ -24,7 +24,7 @@ class Documents extends Component {
         const {shouldShown, onDocumentItemClicked} = this.props;
 
         return (
-                <div className = 'br bs animatedText'>
+                <section className = 'br bs animatedText'>
 
                       <DocumentsHeader
                             itemClicked = {onDocumentItemClicked}
@@ -36,19 +36,19 @@ class Documents extends Component {
 
                             ]} 
                         />
-                        <div className = 'line innerLine'>
+                        <section className = 'line innerLine'>
                             <Line />
-                        </div>
+                        </section>
                     
-                    <div className = 'documentsWhiteSpace'>
+                    <section className = 'documentsWhiteSpace'>
 
                         <DocumentsMainPart
                             itemToBeShown = {shouldShown} 
                         />
 
                         <DocumentsAttention />
-                    </div>                                
-                </div>             
+                    </section>                                
+                </section>             
         );
     }
 }

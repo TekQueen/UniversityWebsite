@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 
 import MainImage from './mainimage';
 import AboutUs from './aboutus';
@@ -7,10 +7,10 @@ import '../App.css';
 
 const HomePage = () => {
     return (
-        <React.Fragment>
+        <Fragment>
             <MainImage />
             <AboutUs />
-        </React.Fragment>
+        </Fragment>
     )
 }
 

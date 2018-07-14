@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 
 import ListOfThings from './listofthings';
@@ -7,13 +7,14 @@ import MiniImage from './miniImage';
 import '../App.css';
 
 const ListOfThingsBox = ({sectionHeader, imgSrc, imgAlt, listofthings}) => 
-        <div>
-        
-            <h3 className = 'sectionHeader'>{sectionHeader}</h3>
+        <Fragment>
+            <header>
+                <h3 className = 'sectionHeader'>{sectionHeader}</h3>
+            </header>
 
-                <div 
+            <section 
                 className = {(imgSrc) ?  'aboutUs' : null}
-                >
+            >
 
                 {
                     ((imgSrc) ? 
@@ -28,8 +29,8 @@ const ListOfThingsBox = ({sectionHeader, imgSrc, imgAlt, listofthings}) =>
                 <ListOfThings 
                     listofthings = {listofthings}
                 />
-            </div>
-        </div>
+            </section>
+        </Fragment>
   
 ListOfThingsBox.propTypes = {
     sectionHeader: PropTypes.string,

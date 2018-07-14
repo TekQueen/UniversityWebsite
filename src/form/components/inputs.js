@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 
 const Inputs = ({ 
@@ -10,8 +10,9 @@ const Inputs = ({
                     value,
                     handleChange
                 } ) =>  
-                    <div>
-                        <h3 className = 'applyLabel'>{inputLabel}</h3>
+                    <Fragment>
+
+                        <label className = 'applyLabel' htmlFor = {inputName}>{inputLabel}</label>
                         <input 
                             className = 'applyInput'
                             id = {inputId} 
@@ -20,8 +21,12 @@ const Inputs = ({
                             placeholder = {inputPlaceHolder}
                             onChange = {handleChange}
                             value = {value}
+                            aria-required = 'true'
+                            aria-label = {inputName}
+                            required
                         />
-                    </div>
+
+                    </Fragment>
 
 Inputs.propTypes = {
     inputLabel: PropTypes.string,

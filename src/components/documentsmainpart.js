@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 
 import EachDocumentSection from './eachDocumentSection';
@@ -7,17 +7,18 @@ import {documentsFakeApi} from '../fakeAPI/documentsFakeApi';
 import '../App.css';
 
 const DocumentsMainPart = ({itemToBeShown}) => 
-        <div>
+        <Fragment>
             {
-                  itemToBeShown.map(
+                itemToBeShown.map(
                     (element, index) => {
                         if (element === 1) { 
                             return (
-                            <EachDocumentSection
-                                key = {index}
-                                header = {documentsFakeApi[index].header}
-                                listofthings = {documentsFakeApi[index].listofthings}  
-                            />);
+                            <Fragment key = {index}>
+                                <EachDocumentSection
+                                    header = {documentsFakeApi[index].header}
+                                    listofthings = {documentsFakeApi[index].listofthings}  
+                                />
+                            </Fragment>);
                         } else {
                             return null;
                         } 
@@ -25,7 +26,7 @@ const DocumentsMainPart = ({itemToBeShown}) =>
                 )            
             }
             
-        </div>
+        </Fragment>
 
 DocumentsMainPart.propTypes = {
     itemToBeShown: PropTypes.array,

@@ -34,6 +34,10 @@ h1, h2, h3, h4, h5, h6, p {
   100% { opacity: 1 }
 }
 
+figure { 
+  display: inline-block;
+  margin: 0;
+}
 /* ---------- Line ---------- */
 
 .line {
@@ -49,11 +53,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 /* ---------- HEADER ---------- */
-header {
-  margin-top: 0.5em;
-}
-
 .navBar {
+  margin-top: 0.5em;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -94,7 +95,7 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
   text-shadow: 1px 1px 5px #1D0F3A;
-  font-size: 1em;
+  font-size: 1.5em;
 }
 
 #headerContainer:hover .euaImage {
@@ -204,7 +205,7 @@ header {
 /* ---------- FOOTER ---------- */
 
 .footer {
-  margin-top: 3em;
+  margin-top: 1em;
 }
 
 #footerFirstPart {
@@ -368,6 +369,7 @@ header {
 .applyLabel {
   font-family: arial;
   color: #1D0F3A;
+  font-size: 1.5em;
 }
 
 .checkBoxcontainer {
@@ -435,6 +437,13 @@ header {
   transform: rotate(45deg);
 }
 
+fieldset {
+  border-radius: 0.5em;
+  margin-top: 2em;
+  margin-bottom: 2em;  
+  border: 1px solid #aaaaaa;
+}
+
 /* ----------  MAJORS ---------- */
 
 .majorContainer {
@@ -487,4 +496,11 @@ header {
     text-align: right;
   }
 
+  #headerText {
+    font-size: 1em;
+  }
+
+  #aboutUsSection h2{
+    font-size: 1.5em; 
+  }
 }

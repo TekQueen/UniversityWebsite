@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 
 import '../App.css';
@@ -9,16 +9,17 @@ const ListOfThings = ({listofthings, isBlue}) =>
             {         
                 listofthings.map(
                     (element, index) => 
-                                <div 
-                                        className = 'list'
-                                        key = {index}
-                                    >   
-                                        {element}
-                                    <div 
-                                        className = {(isBlue ? 'dot blueDot': 'dot')}
-                                    >
-                                    </div>
-                                </div>
+                        <Fragment 
+                            key = {index}
+                        > 
+                            <section  className = 'list'>  
+                                {element}
+                                <section 
+                                    className = {(isBlue ? 'dot blueDot': 'dot')}
+                                >
+                                </section>
+                            </section>
+                        </Fragment>
                                         
                 )
             } 

@@ -4,14 +4,16 @@ import PropTypes from 'prop-types';
 import '../App.css';
 
 const LongText = ({aboutUsTextHeader, aboutUsText}) => 
-        <div className = 'aboutUsSecondSection'>
-            <div className = 'aboutUsText'>
+        <section className = 'aboutUsSecondSection, aboutUsText'>  
+            <header>
                 <h3 className = 'sectionHeader'>{aboutUsTextHeader}</h3>
+            </header>
+            <p>
                 <span className = 'paragraphSpace'>داگاه</span>
                 {aboutUsText}
                 <span>.</span>
-            </div>
-        </div>
+            </p>            
+        </section>
 
 LongText.propTypes = {
     aboutUsText: PropTypes.string.isRequired,

@@ -1,29 +1,41 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import Checkbox from './Checkbox';
 import PropTypes from 'prop-types';
 
 // container
 
-const Checkboxes = ({header, checkboxes, handleChange}) => 
+const Checkboxes = ({
+            header, 
+            checkboxes,
+            handleChange, 
+            inputType,
+            checkboxName
+            }) => 
 
-            <div>
-                <h3 className = 'applyLabel'>{header}</h3>
+            <fieldset>
+                <legend className = 'applyLabel'>
+                    {header}
+                </legend>
                 {
                     checkboxes.map( 
-                        (element, index) => 
-                            <Checkbox
-                                key = {index} 
-                                element = {element}
-                                checkboxName = {element}
-                                handleChange = {handleChange}
-                            />
+                        (element, index) =>
+                            <Fragment key = {index} > 
+                                <Checkbox                     
+                                    element = {element}
+                                    checkboxName = {checkboxName}
+                                    value = {element}
+                                    handleChange = {handleChange}
+                                    inputType = {inputType}
+                                />
+                            </Fragment>
                     )
                 }
-            </div>
+            </fieldset>
  
 Checkboxes.propTypes = {
     header: PropTypes.string,
     checkboxes: PropTypes.array,  
-    handleChange: PropTypes.func
+    handleChange: PropTypes.func,
+    inputType: PropTypes.string
 }
 export default Checkboxes;

@@ -7,14 +7,17 @@ import PropTypes from 'prop-types';
 const Checkbox  = ({
         element, 
         checkboxName, 
-        handleChange
+        handleChange,
+        inputType,
+        value
     }) =>  
         <label 
             className = 'checkBoxcontainer'
         >{element}
             <input
                 name = {checkboxName}
-                type = 'checkbox'
+                type = {inputType}
+                value = {value}
                 onChange = {(event) => handleChange(event)}
             />
             <span className = 'checkmark'></span>
@@ -23,6 +26,7 @@ const Checkbox  = ({
 Checkbox.propTypes = {
     element: PropTypes.string,
     checkboxName: PropTypes.string, 
-    handleChange: PropTypes.func
+    handleChange: PropTypes.func,
+    inputType: PropTypes.string
 }
 export default Checkbox;

@@ -6,15 +6,18 @@ import Form from '../containers/form';
 const ApplyPage = () => {
         
         return (
-            <div className = 'br bs animatedText'>
-                <div className = 'applyInnerPage'>
-                <h2 className = 'formHeader'>Application form for foreign students 2018-2019 academic year</h2>
-                
-                <div id = 'formContainer'>       
+            <section className = 'br bs animatedText'>
+                <section className = 'applyInnerPage'>
+                    <header>
+                        <h2 className = 'formHeader'>Application form for foreign students 2018-2019 academic year</h2>
+                    </header>
+            
                     <Form />
-                </div>
-                </div>
-            </div>
+
+                </section>
+
+                </section>
+           
         );
 
 }

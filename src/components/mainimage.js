@@ -9,17 +9,19 @@ import '../App.css';
 const MainImage =({clickHandler}) => {
     return (
         <section id = 'headerContainer'>
-        
-            <img 
-                src = {euaImage} 
-                alt = 'European University of Armenia' 
-                className = 'euaImage br bs'
-            />
+
+            <figure>
+                <img 
+                    src = {euaImage} 
+                    alt = 'European University of Armenia' 
+                    className = 'euaImage br bs'
+                />
+            </figure>
 
             <div id = 'headerText'>
-                <h1>
+                <p>
                 ز گهواره تا گور دانش بجوی
-                </h1>   
+                </p>   
             </div>
 
            <ApplyButton clickHandler = {clickHandler} />

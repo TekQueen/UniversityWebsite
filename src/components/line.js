@@ -1,5 +1,5 @@
 import React from 'react';
 
-const Line = () => <div className = 'line lieanerBackground'></div>
+const Line = () => <section className = 'line lieanerBackground'></section>
 
 export default Line;

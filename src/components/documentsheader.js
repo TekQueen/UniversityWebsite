@@ -1,23 +1,26 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 
 import '../App.css';
 
 const DocumentsHeader  = ({documentItems, itemClicked}) =>   
-            <div className = 'documentItemsMenue'>
+            <nav className = 'documentItemsMenue'>
                 {
                     documentItems.map(
                         (element, index) => 
-                            <div
-                                className = 'documentItems'
-                                key = {index}
-                                onClick = {() => itemClicked(index)}
+                            <Fragment
+                                key = {index}                            
                             >
-                                {element}
-                            </div>
+                                <section
+                                    onClick = {() => itemClicked(index)}
+                                    className = 'documentItems'
+                                >
+                                    {element}
+                                </section>
+                            </Fragment>
                     )
                 }
-            </div>
+            </nav>
         
 DocumentsHeader.propTypes = {
     documentItems: PropTypes.array,

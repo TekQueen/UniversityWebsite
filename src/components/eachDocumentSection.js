@@ -1,22 +1,24 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 
 import ListOfThings from './listofthings';
 import Line from './line';
 
 const EachDocumentSection = ({header, listofthings}) => 
-    <div>
-        <h3 className = 'documentsH'>{header}</h3>
+    <Fragment>
+        <header>
+            <h3 className = 'documentsH'>{header}</h3>
+        </header>
 
         <ListOfThings
             isBlue = {true}
             listofthings = {listofthings} 
         />
 
-        <div className = 'line innerLine'>
+        <section className = 'line innerLine'>
             <Line />
-        </div>
-    </div>
+        </section>
+    </Fragment>
 
 EachDocumentSection.propTypes = {
     header: PropTypes.string,

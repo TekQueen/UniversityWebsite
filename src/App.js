@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 
 import {
     BrowserRouter,
@@ -6,20 +6,57 @@ import {
     Switch,
 } from 'react-router-dom';
 
-import HomePage from './components/homepage';
-import Documents from './containers/documents';
+import './App.css';
+
 import Header from './components/header';
 import Footer from './components/footer';
-import ApplyPage from './form/components/applyPage';
-import Majors from './components/majors';
+import DynamicImport from './containers/dynamicimport';
 
-import './App.css';
+const HomePage = (props) => (
+  <DynamicImport load = { () => import('./components/homepage')}>
+    {
+      Component => Component === null ?
+      <Fragment>Loading</Fragment> :
+      <Component {...props} />
+    }
+  </DynamicImport>
+)
+
+const Documents = (props) => (
+  <DynamicImport load = { () => import('./containers/documents')}>
+    {
+      Component => Component === null ?
+      <Fragment>Loading</Fragment> : 
+      <Component {...props} />
+    }
+  </DynamicImport>
+)
+
+const ApplyPage = (props) => (
+  <DynamicImport load = { () => import('./form/components/applyPage')}>
+  {
+    Component => Component === null ?
+    <Fragment>Loading</Fragment> : 
+    <Component {...props} />
+  }
+</DynamicImport>
+)
+
+const Majors = (props) => (
+  <DynamicImport load = { () => import('./components/majors')}>
+  {
+    Component => Component === null ?
+    <Fragment>Loading</Fragment> : 
+    <Component {...props} />
+  }
+</DynamicImport>
+)
 
 const App = () => {
     return (
         <BrowserRouter>
 
-          <div>
+          <Fragment>
             <Header />
 
               <Switch>
@@ -30,7 +67,7 @@ const App = () => {
               </Switch>
 
             <Footer />
-          </div>
+          </Fragment>
 
         </BrowserRouter>
     );

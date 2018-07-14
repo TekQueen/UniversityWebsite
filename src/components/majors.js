@@ -2,11 +2,13 @@ import React from 'react';
 import ListOfThings from './listofthings';
 
 const Majors = () => 
-    <div className = 'br bs majorContainer'>
+    <section className = 'br bs majorContainer'>
    
-        <div className = 'documentsWhiteSpace animatedText'>
+        <section className = 'documentsWhiteSpace animatedText'>
             <br />
-            <h1 className = 'documentsContentH1'>رشته ها</h1>
+            <header>
+                <h1 className = 'documentsContentH1'>رشته ها</h1>
+            </header>
             <ListOfThings
                 isBlue = {true}
                 listofthings = {[
@@ -26,7 +28,7 @@ const Majors = () =>
                 ]} 
             />
             <br />
-        </div>
-    </div>
+        </section>
+    </section>
 
 export default Majors;

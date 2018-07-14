@@ -5,13 +5,14 @@ import '../App.css';
 
 const MiniImage = ({imgSrc, imgAlt}) => {
     return (
-        <React.Fragment>
+        <figure>
             <img
                 className = 'miniImage br bs' 
                 src = {imgSrc}
                 alt = {imgAlt}
             />
-        </React.Fragment>
+            <figcaption>{imgAlt}</figcaption>
+        </figure>
     );
 }
 

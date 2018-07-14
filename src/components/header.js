@@ -6,26 +6,23 @@ import logo from '../image/logo.png';
 import '../App.css';
 
 const Header = () => 
-        <header className = 'br lieanerBackground'>
-            <div className = 'navBar'> 
+            <nav className = 'navBar br lieanerBackground'> 
 
-                <div className = 'nav'>
+                <nav className = 'nav'>
                     <NavLink to = '/'>خانه</NavLink>
                     <NavLink to = '/apply'>پیش ثبت نام</NavLink>
                     <NavLink to = '/majors'>رشته ها</NavLink>
                     <NavLink to = '/documents'>مدارک</NavLink>
-                </div>
+                </nav>
                 
-                <div className = 'logo'>
+                <nav className = 'logo'>
                     <NavLink to = '/'>
                         <img src = {logo} alt = 'eua logo' />
                     </NavLink>
-                </div>
+                </nav>
                               
-            </div>
-
-            
-        </header>
+            </nav>     
+      
 
 
 export default Header;

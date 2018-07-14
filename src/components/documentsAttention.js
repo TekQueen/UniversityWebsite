@@ -5,9 +5,11 @@ import ListOfThings from './listofthings';
 import '../App.css';
 
 const DocumentsAttention = () =>
-            <div className = 'documentsAttentionWhiteSpace'>
+            <section className = 'documentsAttentionWhiteSpace'>
                 <br />
-                <h2>توجه فرمایید</h2>
+                <header>
+                    <h2>توجه فرمایید</h2>
+                </header>
                 <ListOfThings
                     listofthings = {[
                         'ترجمه مدارک به زبان انگلیسی روسی یا ارمنی در دارلترجمه معتبر ترجمه رسمی شود. و دارای تایید از دادگستری، وزارت امور خارجه و تایید از سفارت ارمنستان در تهران باشد',
@@ -18,6 +20,6 @@ const DocumentsAttention = () =>
                     ]} 
                 />
                 <br />
-            </div>
+            </section>
 
 export default DocumentsAttention;

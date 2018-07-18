@@ -33,7 +33,7 @@ const Documents = (props) => (
 )
 
 const ApplyPage = (props) => (
-  <DynamicImport load = { () => import('./form/components/applyPage')}>
+  <DynamicImport load = { () => import('./form/containers/applyPage')}>
   {
     Component => Component === null ?
     <Fragment>Loading</Fragment> : 
@@ -43,7 +43,7 @@ const ApplyPage = (props) => (
 )
 
 const Majors = (props) => (
-  <DynamicImport load = { () => import('./components/majors')}>
+  <DynamicImport load = { () => import('./majors/components/majors')}>
   {
     Component => Component === null ?
     <Fragment>Loading</Fragment> : 

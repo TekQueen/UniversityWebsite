@@ -5,6 +5,8 @@ import Checkboxes from '../components/checkboxes';
 import Checkbox from '../components/Checkbox';
 import Submit from '../components/submit';
 
+import firebaseConfig, {databaseRef} from '../../config/firebaseConfig'; 
+
 import {connect} from 'react-redux';
 import {setInputChante, setItemChecked} from '../actions/actions';
 
@@ -29,10 +31,18 @@ const mapDispatchToProps = dispatch => ({
 class Form extends Component {
 
     handleSubmit = (event) => { 
-        event.preventDefault();
+        databaseRef.ref().child('students').push([
+            this.props.name, 
+            this.props.lastName, 
+            this.props.fatherName, 
+            this.props.dateOfBirth, 
+            this.props.localAddress, 
+            this.props.addressInArmenia, 
+            this.props.telephoneNumber, 
+            this.props.checkedItems
+        ]);
         alert('Thanks for submitting the form!');
     }
-
     render() {
 
         let {
@@ -51,6 +61,9 @@ class Form extends Component {
 
         return (
             <section id = 'formContainer'>
+                <header>
+                        <h2 className = 'formHeader'>Application form for foreign students 2018-2019 academic year</h2>
+                    </header>
                 <form onSubmit = {this.handleSubmit}>
 
                 <Inputs 
@@ -184,7 +197,6 @@ class Form extends Component {
                  
                 
                 <Submit />
-                
             </form>
         </section>
 

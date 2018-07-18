@@ -1,32 +1,29 @@
 import React from 'react';
 
-import euaImage from '../image/eua.jpg';
-
 import ApplyButton from './applyButton';
 
 import '../App.css';
 
-const MainImage =({clickHandler}) => {
+const MainImage =({clickHandler, src}) => {
     return (
-        <section id = 'headerContainer'>
+        <section className = 'headerContainer'>
 
             <figure>
                 <img 
-                    src = {euaImage} 
-                    alt = 'European University of Armenia' 
+                    src = {src} 
+                    alt = 'دانشگاه اروپایی ارمنستان' 
                     className = 'euaImage br bs'
                 />
             </figure>
 
-            <div id = 'headerText'>
+            <div className = 'headerText'>
                 <p>
-                ز گهواره تا گور دانش بجوی
+                دانشگاه اروپایی ارمنستان
                 </p>   
             </div>
 
            <ApplyButton clickHandler = {clickHandler} />
-          
-      
+           
         </section>
     );
 }

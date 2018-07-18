@@ -82,14 +82,14 @@ figure {
   height: 80vh;
 }
 
-#headerContainer {
+.headerContainer {
   position: relative;
   text-align: center;
   color: white;
 }
 
 
-#headerText {
+.headerText {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -98,11 +98,11 @@ figure {
   font-size: 1.5em;
 }
 
-#headerContainer:hover .euaImage {
+.headerContainer:hover .euaImage {
   opacity: 0.9;
 }
 
-#headerContainer:hover #headerText {
+.headerContainer:hover .headerText {
   display: none;
 }
 
@@ -129,7 +129,7 @@ figure {
   box-shadow: 0 0 2em #1D0F3A;
 }
 
-#headerContainer:hover #applyNow {
+.headerContainer:hover #applyNow {
   opacity: 0.9;
 }
 
@@ -172,10 +172,6 @@ figure {
 .aboutUs {
   display: flex;
   justify-content: space-between;
-}
-
-.singleAboutUs{
-
 }
 
 .miniImage {
@@ -264,6 +260,13 @@ figure {
   font-weight: bold;
 }
 
+.conditions {
+  color: #330701;
+  text-align: right;
+  font-size: 1.3em;
+  line-height: 2em; 
+  font-weight: 300px;
+}
 
 
 .documentsWhiteSpace {
@@ -275,6 +278,7 @@ figure {
 
 .documentsContentH1 {
   text-align: center;
+  font-size: 2em;
   color: #1D0F3A;
 }
 
@@ -444,6 +448,29 @@ fieldset {
   border: 1px solid #aaaaaa;
 }
 
+/* ----------  LOGON SIGNUP ---------- */
+
+.loginButton {
+  background-color: #0B3E1C;
+  color: white;
+  width: 20vw;
+  padding: 0.5em;
+}
+
+.signUpButton {
+  background: #290117;
+  color: white;
+  width: 20vw;
+  padding: 0.5em;
+}
+
+.buttonsContainer {
+  display: flex;
+  width: 55vw;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: arial;
+}
 /* ----------  MAJORS ---------- */
 
 .majorContainer {
@@ -454,8 +481,71 @@ fieldset {
   text-align: center;
   color: #1D0F3A;
 }
+
+.accordion {
+  font-family: arial;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  color: #1D0F3A;
+  box-shadow: 0.1em 0.1em 0.3em #1D0F3A;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  padding: 1em;
+  width: 100%;
+  text-align: right;
+  outline: none;
+  font-size: 1.3em;
+}
+
+.accordionClicked {
+  box-shadow: none;
+  background-color: #eee;
+  box-shadow: 0 0 0.3em #1D0F3A;
+}
+
+.accordion:hover {
+  box-shadow: none;
+  background-color: #eee;
+  box-shadow: 0 0 0.3em #1D0F3A;
+}
+
+/* ----------  SLIDE SHOW ---------- */
+
+.sliderDot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.sliderDot:hover {
+  background-color: #717171;
+}
+
+.sliderDot:active {
+  background-color: #717171;
+}
+
+.sliderDotContainers {
+  text-align: center;
+  margin-top: 1em;
+}
+
 @media screen and (max-width: 700px) {
   .aboutUs {   
+    flex-direction: column;
+  }
+
+  .euaImage {
+    height: 60vh;
+  }
+
+  .buttonsContainer {
     flex-direction: column;
   }
 
@@ -496,9 +586,14 @@ fieldset {
     text-align: right;
   }
 
-  #headerText {
+  .headerText {
     font-size: 1em;
   }
+
+  .documentsContentH1 {
+    font-size: 1em;
+  }
+  
 
   #aboutUsSection h2{
     font-size: 1.5em; 

@@ -19,8 +19,10 @@ const Footer = () =>
                 <FooterContent 
                     contentHeader = 'دانشگاه اروپائی'
                     content = {[
-                        'جمهوری ارمنستان، شهر ایروان– 037',
+                        'جمهوری ارمنستان، شهر ایروان– 0037',
                         'خیابان داوید آنهاقت ، پلاک 10',
+                        'طبقه ی ۵',
+                        'دفتر ثبت نام دانش جویان خارجی اتاق ایران شناسی',
                         'تلفن : 241891  0037410',
                     ]}
                 />
@@ -41,7 +43,8 @@ const Footer = () =>
                     imagesArray = {[    
                         {
                             imageSrc: `${instagram}`,
-                            imageAlt: `instagram logo`
+                            imageAlt: `instagram logo`,
+                            linkTo: `https://www.instagram.com/european.u/?hl=en`           
                         },                       
                         {
                             imageSrc: `${facebook}`,
@@ -50,7 +53,8 @@ const Footer = () =>
                         },                        
                         {
                             imageSrc: `${telegram}`,
-                            imageAlt: `telegram logo`
+                            imageAlt: `telegram logo`,
+                            linkTo: `https://t.me/Eriicta`
                         },
                     ]}
                 />

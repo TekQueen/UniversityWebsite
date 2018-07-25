@@ -2,6 +2,7 @@ import React, {Fragment} from 'react';
 
 import AboutUs from './aboutus';
 import SlideShow from '../slideShow/containers/slideshow';
+import ContactUs from '../contactUs/containers/contactUs';
 
 import '../App.css';
 
@@ -10,6 +11,7 @@ const HomePage = () => {
         <Fragment>
             <SlideShow />         
             <AboutUs />
+            <ContactUs />
         </Fragment>
     )
 }

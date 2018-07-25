@@ -1,16 +1,19 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
-import '../App.css';
-
-const FooterLogos = ({imagesArray, linkTo}) =>
-        <div className = 'socialMedia'>
+class FooterLogos extends PureComponent {
+    render() {
+        const {imagesArray} = this.props;
+        
+        return (
+            <section className = 'socialMedia'>
             {
                 imagesArray.map(
                     (element, index) => 
                         <a 
                             key = {index}
                             href = {element.linkTo}
+                            target = '_blank'
                         >
                             <img
                                 className = 'socialMediaLogo'
@@ -20,10 +23,13 @@ const FooterLogos = ({imagesArray, linkTo}) =>
                         </a>                
                 )
             }
-        </div>
-
+        </section>
+        );
+    }
+}
+        
 FooterLogos.propTypes = {
-    imagesArray: PropTypes.array
+    imagesArray: PropTypes.array,
 }
 
 export default FooterLogos;

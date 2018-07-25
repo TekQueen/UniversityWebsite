@@ -8,9 +8,18 @@ import {
 
 import './App.css';
 
-import Header from './components/header';
-import Footer from './components/footer';
+import Header from './header/components/header';
+import Footer from './footer/components/footer';
 import DynamicImport from './containers/dynamicimport';
+
+// languages 
+import {
+  header,
+  footer,
+  majors,
+  documentsTitle
+} from './languagesFile/persian';
+
 
 const HomePage = (props) => (
   <DynamicImport load = { () => import('./components/homepage')}>
@@ -23,11 +32,13 @@ const HomePage = (props) => (
 )
 
 const Documents = (props) => (
-  <DynamicImport load = { () => import('./containers/documents')}>
+  <DynamicImport load = { () => import('./documents/containers/documents')}>
     {
       Component => Component === null ?
       <Fragment>Loading</Fragment> : 
-      <Component {...props} />
+      <Component {...props} 
+        titles = {documentsTitle}
+      />
     }
   </DynamicImport>
 )
@@ -47,7 +58,22 @@ const Majors = (props) => (
   {
     Component => Component === null ?
     <Fragment>Loading</Fragment> : 
-    <Component {...props} />
+    <Component 
+      header  = {majors[0].header}
+      majorSectionArr = {majors[1]}
+      {...props} 
+    />
+  }
+</DynamicImport>
+)
+
+const TutionAndDeadline = (props) => (
+  <DynamicImport load = { () => import('./tutionAndDeadLine/components/tutioanAndDeadline')}>
+  {
+    Component => Component === null ?
+    <Fragment>Loading</Fragment> : 
+    <Component {...props} 
+    />
   }
 </DynamicImport>
 )
@@ -57,16 +83,22 @@ const App = () => {
         <BrowserRouter>
 
           <Fragment>
-            <Header />
+            <Header 
+              navArray = {header}
+            />
 
               <Switch>
                 <Route path = '/' component = {HomePage} exact />
                 <Route path = '/documents' component = {Documents} />
                 <Route path = '/apply' component = {ApplyPage} />
                 <Route path = '/majors' component = {Majors} />
+                <Route path = '/tuitionAndDeadline' component = {TutionAndDeadline} />
               </Switch>
 
-            <Footer />
+            <Footer 
+              footerContentArr = {footer[0]}
+              footerLinksArr = {footer[1]}
+            />
           </Fragment>
 
         </BrowserRouter>

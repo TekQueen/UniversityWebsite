@@ -7,11 +7,10 @@ const MiniImage = ({imgSrc, imgAlt}) => {
     return (
         <figure>
             <img
-                className = 'miniImage br bs' 
+                className = 'miniImage br' 
                 src = {imgSrc}
                 alt = {imgAlt}
             />
-            <figcaption>{imgAlt}</figcaption>
         </figure>
     );
 }

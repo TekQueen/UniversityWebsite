@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import '../App.css';
 
 const ListOfThings = ({listofthings, isBlue}) =>
-        <div>
+        <Fragment>
             
             {         
                 listofthings.map(
@@ -12,7 +12,7 @@ const ListOfThings = ({listofthings, isBlue}) =>
                         <Fragment 
                             key = {index}
                         > 
-                            <section  className = 'list'>  
+                            <section className = 'list'>  
                                 {element}
                                 <section 
                                     className = {(isBlue ? 'dot blueDot': 'dot')}
@@ -24,7 +24,7 @@ const ListOfThings = ({listofthings, isBlue}) =>
                 )
             } 
               
-        </div>
+        </Fragment>
  
 
 ListOfThings.propTypes = {

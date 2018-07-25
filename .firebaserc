@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "euarmenia-9604e"
+    "default": "euarmenia-9604e",
+    "staging": "staging-65169"
   }
 }

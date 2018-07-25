@@ -59,7 +59,6 @@ figure {
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  flex-wrap: wrap;
 }
 
 .navBar a {
@@ -193,6 +192,7 @@ figure {
 
 .list {
   text-align: right;
+  font-size: 1.1em;
   margin-bottom: 1.5em;
   color: #404040;
   font-family: arial;
@@ -253,14 +253,14 @@ figure {
   color: #1D0F3A;
   cursor: pointer;
   padding: 1em;
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
 .documentItems:hover {
   font-weight: bold;
 }
 
-.conditions {
+.attention {
   color: #330701;
   text-align: right;
   font-size: 1.3em;
@@ -293,6 +293,12 @@ figure {
   font-size: 1.3em;
   text-align: right;
   color: #1D0F3A;
+}
+
+.documentsRedH {
+  font-size: 1.3em;
+  text-align: right;
+  color: #330701;
 }
 
 
@@ -332,10 +338,7 @@ figure {
   width: 50vw;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 1m;
-  margin-bottom: 0.5em;
   font-size: 1.5em;
-  font-family: Raleway;
   background-color: #1D0F3A;
   border: #1D0F3A;
   color: #ffef13;
@@ -346,22 +349,33 @@ figure {
   cursor: pointer;
 }
 
+.contactSubmit {
+  width: auto;
+  padding: 0.3em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .applySubmit:hover {
  box-shadow: 0 0 0.3em#1D0F3A;
+}
+
+.contactSubmit:hover {
+  box-shadow: 0 0 0.3em #ffef13 !important;
 }
 
 .applyInput {
   display: block;
   padding: 10px;
-  width: 50vw;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 1m;
-  margin-bottom: 0.5em;
+  margin-top: 10px;
+  margin-bottom: 10px;
   font-size: 1.5em;
   font-family: Raleway;
   border: 1px solid #aaaaaa;
   border-radius: 0.5em;
+  width: auto;
 }
 
 .applyInput:focus {
@@ -484,14 +498,13 @@ fieldset {
 
 .accordion {
   font-family: arial;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin: 0.5em 0 0.5em 0;
+  padding: 0.3em; 
   color: #1D0F3A;
-  box-shadow: 0.1em 0.1em 0.3em #1D0F3A;
+  box-shadow: 0 0 0.3em #1D0F3A;
   background-color: white;
   border: none;
   cursor: pointer;
-  padding: 1em;
   width: 100%;
   text-align: right;
   outline: none;
@@ -508,6 +521,15 @@ fieldset {
   box-shadow: none;
   background-color: #eee;
   box-shadow: 0 0 0.3em #1D0F3A;
+}
+
+.majorCart {
+  width: 25vw;
+  line-height: 25vw;
+  text-align: center;
+  border-radius: 0.5em;
+  color: white;
+  background: linear-gradient(#1D0F3A, #7F719B);
 }
 
 /* ----------  SLIDE SHOW ---------- */
@@ -535,6 +557,68 @@ fieldset {
   text-align: center;
   margin-top: 1em;
 }
+
+/* ----------  Contact Us ---------- */
+
+.contactUs {
+  background-color: #1D0F3A;
+  padding: 1em;
+  opacity: 0.9;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+
+.close {
+  font-size: 1.5em;
+  background-color: #1D0F3A;
+  color: #ffef13;
+  font-family: Arial, Helvetica, sans-serif;
+  width: auto;
+  padding: 0.3em;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  border: #1D0F3A;
+  outline: none;
+}
+
+.close:hover {
+  box-shadow: 0 0 1em #ffef13;
+  border-radius: 50%;
+}
+
+.closed {
+  display: none;
+}
+
+.contactText {
+  color: white;
+  text-align: right;
+}
+
+.help {
+  font-size: 1.3em;
+  text-align: center;
+}
+
+.contactButton {
+  font-size: 3em;
+  color: #ffef13;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  border: #1D0F3A;
+  outline: none;
+  position: fixed;
+  line-height: 50px;
+  right: 1em;
+  bottom: 1em;
+}
+
+.contactButton:hover {
+  box-shadow: 0 0 0.6em  #1D0F3A;
+}
+
 
 @media screen and (max-width: 700px) {
   .aboutUs {   
@@ -566,7 +650,7 @@ fieldset {
   }
 
   .documentItemsMenue {
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     font-size: 0.8em;
@@ -591,11 +675,33 @@ fieldset {
   }
 
   .documentsContentH1 {
-    font-size: 1em;
+    font-size: 1.3em;
   }
   
 
   #aboutUsSection h2{
     font-size: 1.5em; 
+  }
+
+  .dot, .blueDot, .miniImage {
+    display: none;
+  }
+
+
+  .list {
+    text-align: right;
+    font-size: 1em;
+  }
+
+  .contactUs {
+   width: 75vw;
+  }
+
+  .contactUs {
+    width: 100%;
+  }
+
+  .accordion {
+    font-size: 1.1em;
   }
 }

@@ -1,9 +1,13 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, Component} from 'react';
 import PropTypes from 'prop-types';
 
-import '../App.css';
-
-const DocumentsHeader  = ({documentItems, itemClicked}) =>   
+class DocumentsHeader extends Component {
+    shouldComponentUpdate() {
+        return false;
+    }
+    render() {
+        const {documentItems, itemClicked} = this.props;
+        return (
             <nav className = 'documentItemsMenue'>
                 {
                     documentItems.map(
@@ -21,7 +25,10 @@ const DocumentsHeader  = ({documentItems, itemClicked}) =>
                     )
                 }
             </nav>
-        
+        );
+    }
+}
+       
 DocumentsHeader.propTypes = {
     documentItems: PropTypes.array,
     itemClicked: PropTypes.func

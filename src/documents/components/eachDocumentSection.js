@@ -1,13 +1,13 @@
 import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 
-import ListOfThings from './listofthings';
-import Line from './line';
+import ListOfThings from '../../components/listofthings';
+import Line from '../../components/line';
 
-const EachDocumentSection = ({header, listofthings}) => 
+const EachDocumentSection = ({header, listofthings, isRed}) => 
     <Fragment>
         <header>
-            <h3 className = 'documentsH'>{header}</h3>
+            <h3  className =  {isRed ? 'documentsRedH': 'documentsH'}>{header}</h3>
         </header>
 
         <ListOfThings

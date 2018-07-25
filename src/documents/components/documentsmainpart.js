@@ -2,9 +2,10 @@ import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 
 import EachDocumentSection from './eachDocumentSection';
-import {documentsFakeApi} from '../fakeAPI/documentsFakeApi';
 
-import '../App.css';
+// language 
+import {documents} from '../../languagesFile/persian'
+
 
 const DocumentsMainPart = ({itemToBeShown}) => 
         <Fragment>
@@ -15,9 +16,17 @@ const DocumentsMainPart = ({itemToBeShown}) =>
                             return (
                             <Fragment key = {index}>
                                 <EachDocumentSection
-                                    header = {documentsFakeApi[index].header}
-                                    listofthings = {documentsFakeApi[index].listofthings}  
+                                    header = {documents[index].header}
+                                    listofthings = {documents[index].listofthings}  
                                 />
+                            <EachDocumentSection
+                                isRed =  {true}
+                                header = 'مدارک مورد نیاز در ارمنستان'
+                                listofthings = {[
+                                `ترجمه پاسپورت به زبان ارمنی`,
+                                `گواهی سلامت از ارمنستان`,
+                                ]}
+                            />
                             </Fragment>);
                         } else {
                             return null;

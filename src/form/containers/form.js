@@ -5,7 +5,7 @@ import Checkboxes from '../components/checkboxes';
 import Checkbox from '../components/Checkbox';
 import Submit from '../components/submit';
 
-import firebaseConfig, {databaseRef} from '../../config/firebaseConfig'; 
+import {databaseRef} from '../../config/firebaseConfig'; 
 
 import {connect} from 'react-redux';
 import {setInputChante, setItemChecked} from '../actions/actions';

@@ -2,7 +2,7 @@ import React, {Component, Fragment} from 'react';
 
 import ContactButton from './contactButton';
 
-import firebaseConfig, {databaseRef} from '../../config/firebaseConfig';
+import {databaseRef} from '../../config/firebaseConfig';
 
 class ContactUs extends Component {
     state = {

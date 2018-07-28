@@ -21,10 +21,10 @@ const DocumentsMainPart = ({itemToBeShown}) =>
                                 />
                             <EachDocumentSection
                                 isRed =  {true}
-                                header = 'مدارک مورد نیاز در ارمنستان'
+                                header = 'مدارکی که باید در کشور ارمنستان تهیه شود'
                                 listofthings = {[
                                 `ترجمه پاسپورت به زبان ارمنی`,
-                                `گواهی سلامت از ارمنستان`,
+                                `گواهی سلامت`,
                                 ]}
                             />
                             </Fragment>);

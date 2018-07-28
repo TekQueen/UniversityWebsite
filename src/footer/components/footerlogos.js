@@ -14,6 +14,7 @@ class FooterLogos extends PureComponent {
                             key = {index}
                             href = {element.linkTo}
                             target = '_blank'
+                            rel= 'noopener noreferrer'
                         >
                             <img
                                 className = 'socialMediaLogo'

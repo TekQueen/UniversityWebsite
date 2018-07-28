@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+import envelop from '../imgs/envelop.png';
+
 class ContactButton extends Component {
  
 
@@ -7,9 +9,9 @@ class ContactButton extends Component {
         return(
             <button
                 onClick = {this.props.handleContactUs}
-                className = {(this.props.isClosed ?  'contactButton br lieanerBackground' : 'closed' )}
+                className = {(this.props.isClosed ?  'contactButton br ' : 'closed' )}
             >
-                &#9993;
+               <img src = {envelop}  alt = 'envelop'/>
             </button>
         );
     }

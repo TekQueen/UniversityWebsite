@@ -17,16 +17,22 @@ import {
   header,
   footer,
   majors,
-  documentsTitle
+  documentsTitle,
+  aboutus
 } from './languagesFile/persian';
 
 
 const HomePage = (props) => (
-  <DynamicImport load = { () => import('./components/homepage')}>
+  <DynamicImport load = { () => import('./homepage/components/homepage')}>
     {
       Component => Component === null ?
       <Fragment>Loading</Fragment> :
-      <Component {...props} />
+      <Component 
+        aboutusHeader = {aboutus[0].aboutUsHeader}
+        longTexes = {aboutus[1]}
+        listOfThingsBox = {aboutus[2]}
+        {...props} 
+      />
     }
   </DynamicImport>
 )

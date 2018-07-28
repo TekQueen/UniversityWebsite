@@ -93,8 +93,8 @@ figure {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-shadow: 1px 1px 5px #1D0F3A;
-  font-size: 1.5em;
+  text-shadow: 1px 1px 10px #330701;
+  font-size: 2.5em;
 }
 
 .headerContainer:hover .euaImage {
@@ -375,7 +375,7 @@ figure {
   font-family: Raleway;
   border: 1px solid #aaaaaa;
   border-radius: 0.5em;
-  width: auto;
+  width: 60vw;
 }
 
 .applyInput:focus {
@@ -562,11 +562,12 @@ fieldset {
 
 .contactUs {
   background-color: #1D0F3A;
-  padding: 1em;
+  padding: 0.5em;
   opacity: 0.9;
   position: fixed;
   right: 0;
   bottom: 0;
+ 
 }
 
 .close {
@@ -595,6 +596,7 @@ fieldset {
 .contactText {
   color: white;
   text-align: right;
+  font-size: 1em;
 }
 
 .help {
@@ -603,14 +605,9 @@ fieldset {
 }
 
 .contactButton {
-  font-size: 3em;
-  color: #ffef13;
-  font-family: Arial, Helvetica, sans-serif;
   cursor: pointer;
-  border: #1D0F3A;
-  outline: none;
   position: fixed;
-  line-height: 50px;
+  padding: 1px;
   right: 1em;
   bottom: 1em;
 }
@@ -671,7 +668,7 @@ fieldset {
   }
 
   .headerText {
-    font-size: 1em;
+    font-size: 1.5em;
   }
 
   .documentsContentH1 {
@@ -703,5 +700,15 @@ fieldset {
 
   .accordion {
     font-size: 1.1em;
+  }
+
+  .contactUs {
+    position: fixed;
+    right: 0em;
+    bottom: 0em;
+    height: auto;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
   }
 }

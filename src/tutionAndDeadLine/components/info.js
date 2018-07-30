@@ -9,13 +9,15 @@ class Info extends PureComponent {
 
         return (
             <section 
-                className = 'infoContainer animatedText'
+                className = 'infoContainer'
             >
                 <Line />
                     {
                         inforContentes.map(
                             (element, index) =>
-                                <Fragment>
+                                <Fragment
+                                    key = {index}
+                                >
                                     <p className = 'infoTitle'>
                                         {element.ifoTitle}
                                     </p>

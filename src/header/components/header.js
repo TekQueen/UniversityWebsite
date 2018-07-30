@@ -25,7 +25,7 @@ class Header extends PureComponent {
                 
                 <nav>
                     <NavLink to = '/'>
-                        <img src = {logo} alt = 'eua logo' />
+                        <img className = 'euaLogo' src = {logo} alt = 'eua logo' />
                     </NavLink>
                 </nav>
                               

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import AboutUs from './aboutus';
 import SlideShow from '../../slideShow/containers/slideshow';
 import ContactUs from '../../contactUs/containers/contactUs';
+import DownloadArabicFile from '../../ArabikFileDownload/arabicFileDownload';
 
 class HomePage extends PureComponent {
     render() {
@@ -14,7 +15,8 @@ class HomePage extends PureComponent {
         } = this.props;
         return (
             <Fragment>
-                <SlideShow />         
+                <DownloadArabicFile />  
+                <SlideShow />     
                 <AboutUs 
                     aboutusHeader = {aboutusHeader}
                     longTexes = {longTexes}

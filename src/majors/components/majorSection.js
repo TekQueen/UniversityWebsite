@@ -43,7 +43,7 @@ class MajorSection extends Component {
                 {
                     (
                         panelShowed ? 
-                        <section className = 'panel'>
+                        <section className = 'animatedText animatedText'>
                             {this.props.children}
                         </section>
                         : 

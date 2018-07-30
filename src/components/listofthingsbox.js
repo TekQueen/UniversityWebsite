@@ -9,7 +9,7 @@ import '../App.css';
 const ListOfThingsBox = ({sectionHeader, imgSrc, imgAlt, listofthings}) => 
         <Fragment>
             <header>
-                <h3 className = 'sectionHeader'>{sectionHeader}</h3>
+                <p className = 'sectionHeader'>{sectionHeader}</p>
             </header>
 
             <section 

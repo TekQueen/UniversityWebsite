@@ -1,4 +1,4 @@
-import React, {PureComponent, Fragment} from 'react';
+import React, {PureComponent} from 'react';
 
 import MajorSection from '../../majors/components/majorSection';
 import Info from './info';
@@ -7,7 +7,7 @@ class TutionAndDeadline extends PureComponent {
     render() {
         const {header, infoDetails} = this.props;
         return (
-            <Fragment>
+            <section className = 'animatedText'>
                 <header>
                     <p className = 'documentsContentH1'>
                         {header}
@@ -27,7 +27,7 @@ class TutionAndDeadline extends PureComponent {
                         </MajorSection>
                 )
             }
-         </Fragment>
+         </section>
         );
     }
 }  

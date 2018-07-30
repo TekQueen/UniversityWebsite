@@ -1,4 +1,4 @@
-import React, {Fragment, PureComponent} from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
 import conferenceRoom from '../imgs/conference.jpg'
@@ -12,7 +12,7 @@ class Majors extends PureComponent {
 
     render() {
         return (
-            <Fragment>
+            <section className = 'animatedText'>
                 <MainImage src = {conferenceRoom} />
 
                 <header>
@@ -22,20 +22,20 @@ class Majors extends PureComponent {
                 {
                     this.props.majorSectionArr.map(
                         (element, index) => 
-                        <MajorSection 
-                            key = {index}
-                            major = {element[0].majorHeader}
-                        >
-                            <Line />
-                                <ListOfThings 
-                                    isBlue = {true}
-                                    listofthings = {element[0].majorList}  
-                                />
-                            <Line />
-                        </MajorSection>
+                            <MajorSection 
+                                key = {index}
+                                major = {element[0].majorHeader}
+                            >
+                                <Line />
+                                    <ListOfThings 
+                                        isBlue = {true}
+                                        listofthings = {element[0].majorList}  
+                                    />
+                                <Line />
+                            </MajorSection>
                     )
                 }
-            </Fragment>
+            </section>
         );
     }
 }

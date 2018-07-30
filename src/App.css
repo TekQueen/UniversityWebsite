@@ -25,8 +25,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .animatedText {
   opacity: 1;
-  animation: Fade 2s ease;
-  color: #404040;
+  animation: Fade 1.5s ease;
 }
 
 @keyframes Fade {
@@ -141,8 +140,6 @@ figure {
 }
 
 .aboutUsSecondSection {
-  opacity: 1;
-  animation: fade 2s ease;
   color: #404040;
 }
 
@@ -155,7 +152,7 @@ figure {
   margin-top: 0.5em;
 }
 
-#aboutUsSection h2{
+.aboutUsHeaderPart {
   text-align: center;
   font-size: 2em;
   color: #1D0F3A;
@@ -485,6 +482,7 @@ fieldset {
   margin-right: auto;
   font-family: arial;
 }
+
 /* ----------  MAJORS ---------- */
 
 .majorContainer {
@@ -634,6 +632,93 @@ fieldset {
   display: inline;
 }
 
+/* ----------  DOWNLOAD ARABIC FILE ---------- */
+
+.DAFContainer {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  text-align: center;
+  padding: 0.5em;
+  position: relative;
+}
+
+.fileA {
+  text-decoration: none;
+}
+
+.fileToBeDownloaded {
+  color: #1D0F3A;
+  font-size: 1.3em;
+}
+
+.fileToBeDownloaded:hover {
+  text-decoration: underline #ffef13;
+  text-shadow: 0 0 0.1px #1D0F3A;
+}
+
+.closeArabicFile {
+  background-color: #1D0F3A;
+  color: #ffef13;
+  box-shadow: 0 0 1px #ffef13; 
+  border-radius: 50%;
+  padding: 0.3em;
+  font-weight: bolder;
+  width: 30px;
+  line-height: 30px;
+  cursor: pointer;
+  position: relative;
+  top: -30px;
+  float: right;
+}
+
+.closeArabicFile:hover {
+  background-color: #ffef13;
+  box-shadow: 0 0 0.8em #1D0F3A;
+  color: #1D0F3A;
+}
+
+.closeed {
+  display: none;
+}
+
+/* ----------   LOADER  ---------- */
+
+.loader {
+  border-radius: 50%;
+  border-top: 1.5em solid  #1D0F3A;
+  border-right: 1.5em  solid #bbb;
+  border-left: 1.5em  solid #ffef13;
+  border-bottom: 1.5em  solid #330701;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loaderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 5em;
+}
+
+.loaderText {
+  color: #1D0F3A;
+  font-size: 2em;
+}
+
+/* ******************************************************************** */
 @media screen and (max-width: 700px) {
   .aboutUs {   
     flex-direction: column;
@@ -728,4 +813,14 @@ fieldset {
     height: 100%;
     overflow: scroll;
   }
+
+  .euaLogo {
+    margin-top: 15%;
+    margin-bottom: 15%;
+  }
+
+  .DAFContainer {
+    font-size: 1.1em;
+  }
+  
 }

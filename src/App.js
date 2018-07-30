@@ -11,6 +11,7 @@ import './App.css';
 import Header from './header/components/header';
 import Footer from './footer/components/footer';
 import DynamicImport from './containers/dynamicimport';
+import Loading from './loading/loading';
 
 // languages 
 import {
@@ -27,7 +28,7 @@ const HomePage = (props) => (
   <DynamicImport load = { () => import('./homepage/components/homepage')}>
     {
       Component => Component === null ?
-      <Fragment>Loading</Fragment> :
+      <Loading /> :
       <Component 
         aboutusHeader = {aboutus[0].aboutUsHeader}
         longTexes = {aboutus[1]}
@@ -42,7 +43,7 @@ const Documents = (props) => (
   <DynamicImport load = { () => import('./documents/containers/documents')}>
     {
       Component => Component === null ?
-      <Fragment>Loading</Fragment> : 
+      <Loading /> : 
       <Component {...props} 
         titles = {documentsTitle}
       />
@@ -54,7 +55,7 @@ const ApplyPage = (props) => (
   <DynamicImport load = { () => import('./form/containers/applyPage')}>
   {
     Component => Component === null ?
-    <Fragment>Loading</Fragment> : 
+    <Loading /> : 
     <Component {...props} />
   }
 </DynamicImport>
@@ -64,7 +65,7 @@ const Majors = (props) => (
   <DynamicImport load = { () => import('./majors/components/majors')}>
   {
     Component => Component === null ?
-    <Fragment>Loading</Fragment> : 
+    <Loading /> : 
     <Component 
       header  = {majors[0].header}
       majorSectionArr = {majors[1]}
@@ -78,7 +79,7 @@ const TutionAndDeadline = (props) => (
   <DynamicImport load = { () => import('./tutionAndDeadLine/components/tutioanAndDeadline')}>
   {
     Component => Component === null ?
-    <Fragment>Loading</Fragment> : 
+    <Loading /> : 
     <Component 
       header = {tutionAndDeadline[0].header}
       infoDetails = {tutionAndDeadline[1].infoDetails}

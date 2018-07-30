@@ -19,9 +19,9 @@ class AboutUs extends PureComponent {
             listOfThingsBox
         } = this.props;
         return (
-            <section id = 'aboutUsSection'>
+            <section id = 'aboutUsSection' className = 'animatedText'>
                 <header>
-                    <h2>{aboutusHeader}</h2>
+                    <p className = 'aboutUsHeaderPart'>{aboutusHeader}</p>
                 </header>
 
                 {
@@ -39,7 +39,7 @@ class AboutUs extends PureComponent {
                     <LongText
                         aboutUsText =  {
                             <Fragment>
-                                دانشگاه اروپایی ارمنستان عضو انجمن <Fragment>{this.eurashe}</Fragment> می باشد. در این انجمن ۵۰۰ دانشگاه معتبر از ۴۰ کشور جهان عضو می باشند.مدارک کارشناسی، کارشناسی ارشد و دکترای دانشگاه های عضو این انجمن مورد تأیید یکدیگر می باشد
+                                دانشگاه اروپایی ارمنستان عضو انجمن <Fragment>{this.eurashe}</Fragment> می باشد. در این انجمن ۵۰۰ دانشگاه معتبر از ۴۰ کشور جهان عضو می باشند. مدارک کارشناسی، کارشناسی ارشد و دکترای دانشگاه های عضو این انجمن مورد تأیید یکدیگر می باشد
                             </Fragment>
                         }
                     />
@@ -48,7 +48,9 @@ class AboutUs extends PureComponent {
                 {
                     listOfThingsBox.map(
                         (element, index) => 
-                                <Fragment>
+                                <Fragment
+                                    key = {index}
+                                >
                                     <Line />
                                     <ListOfThingsBox
                                         key = {index} 

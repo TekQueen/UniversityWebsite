@@ -8,9 +8,9 @@ class LongText extends PureComponent {
         const {aboutUsTextHeader, aboutUsText} = this.props;
 
         return (
-            <section className = 'aboutUsSecondSection, aboutUsText'>  
+            <section className = 'aboutUsSecondSection aboutUsText'>  
                 <header>
-                    <h3 className = 'sectionHeader'>{aboutUsTextHeader}</h3>
+                    <p className = 'sectionHeader'>{aboutUsTextHeader}</p>
                 </header>
                 <p>
                     <span className = 'paragraphSpace'>داگاه</span>

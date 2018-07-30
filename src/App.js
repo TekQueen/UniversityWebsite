@@ -18,7 +18,8 @@ import {
   footer,
   majors,
   documentsTitle,
-  aboutus
+  aboutus,
+  tutionAndDeadline
 } from './languagesFile/persian';
 
 
@@ -78,7 +79,10 @@ const TutionAndDeadline = (props) => (
   {
     Component => Component === null ?
     <Fragment>Loading</Fragment> : 
-    <Component {...props} 
+    <Component 
+      header = {tutionAndDeadline[0].header}
+      infoDetails = {tutionAndDeadline[1].infoDetails}
+      {...props} 
     />
   }
 </DynamicImport>

@@ -1,4 +1,4 @@
-import React, { Pureomponent } from 'react';
+import React from 'react';
 
 const Loading = () => 
             <section className = 'loaderContainer'>

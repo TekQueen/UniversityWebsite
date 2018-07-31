@@ -37,6 +37,16 @@ figure {
   display: inline-block;
   margin: 0;
 }
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 /* ---------- Line ---------- */
 
 .line {
@@ -672,9 +682,7 @@ fieldset {
 }
 
 .closeArabicFile:hover {
-  background-color: #ffef13;
-  box-shadow: 0 0 0.8em #1D0F3A;
-  color: #1D0F3A;
+  box-shadow: 0 0 5px #1D0F3A; 
 }
 
 .closeed {
@@ -685,24 +693,14 @@ fieldset {
 
 .loader {
   border-radius: 50%;
-  border-top: 1.5em solid  #1D0F3A;
-  border-right: 1.5em  solid #bbb;
-  border-left: 1.5em  solid #ffef13;
-  border-bottom: 1.5em  solid #330701;
+  border-top: 1em solid  #1D0F3A;
+  border-right: 1em  solid #1D0F3A;
+  border-left: 1em  solid #ffef13;
+  border-bottom: 1em  solid #ffef13;
   width: 120px;
   height: 120px;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
-}
-
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
 }
 
 .loaderContainer {

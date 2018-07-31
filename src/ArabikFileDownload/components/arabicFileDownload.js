@@ -1,6 +1,6 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 
-import arabicFile from './file/arabicFile.pdf';
+import arabicFile from '../file/arabicFile.pdf';
 
 class DownloadArabicFile extends PureComponent {
     state = {
@@ -14,7 +14,10 @@ class DownloadArabicFile extends PureComponent {
     }
 
     render() {
+
         let {isOpen} = this.state;
+        let {downloadArabicFileTitle} = this.props;
+
         return (
             <section 
                 className = { (
@@ -36,7 +39,7 @@ class DownloadArabicFile extends PureComponent {
                         download
                     >
                     <p className = 'fileToBeDownloaded'>
-                    تحميل الجامعة الأوروبية لأرمينيا المعلومات باللغة العربية
+                        {downloadArabicFileTitle}
                     </p>
                     </a>
                     

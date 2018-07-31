@@ -23,6 +23,10 @@ import {
   tutionAndDeadline
 } from './languagesFile/persian';
 
+import {
+  downloadArabicFileTitle
+} from './languagesFile/arabic';
+
 
 const HomePage = (props) => (
   <DynamicImport load = { () => import('./homepage/components/homepage')}>
@@ -33,6 +37,7 @@ const HomePage = (props) => (
         aboutusHeader = {aboutus[0].aboutUsHeader}
         longTexes = {aboutus[1]}
         listOfThingsBox = {aboutus[2]}
+        downloadArabicFileTitle = {downloadArabicFileTitle.title}
         {...props} 
       />
     }

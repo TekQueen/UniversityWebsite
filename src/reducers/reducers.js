@@ -1,7 +1,7 @@
 import {SET_DOCUMENT_ITEM_CLICKED} from '../constants/constants';
 
 const initalState = {
-    shouldShown: [0, 0, 0, 0]
+    shouldShown: [0, 0, 0, 0, 0]
 }
 
 export const onDocumentItemClicked = (state = initalState, action = {}) => {
@@ -12,7 +12,7 @@ export const onDocumentItemClicked = (state = initalState, action = {}) => {
                     return Object.assign({}, state, {shouldShown: action.payload})
                 }
             }
-            return Object.assign({}, state, {shouldShown: [0, 0, 0, 0]});
+            return Object.assign({}, state, {shouldShown: [0, 0, 0, 0, 0]});
         default:
             return state;
     }
